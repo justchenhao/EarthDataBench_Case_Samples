@@ -1,0 +1,43 @@
+{
+  "author_replay": 0.6,
+  "case_id": "hydrology/fluxnet2015_et_benchmark_v05",
+  "case_version": "v0.5",
+  "evaluator_revision": "v0.6",
+  "decision_order": [
+    "formal output gate",
+    "expert C fit with B degradation cap",
+    "robust independent B superiority only when C and B cap reach 0.6"
+  ],
+  "fixed_wording_required": false,
+  "formal_t2_tuning_allowed": false,
+  "method_contract": {
+    "additional_top_level_keys_allowed": true,
+    "required_top_level_keys": [
+      "task_id",
+      "validation_fidelity",
+      "public_input_sha256",
+      "predictors",
+      "sites"
+    ],
+    "sites_container": "object",
+    "site_required_keys": [
+      "training_rows"
+    ],
+    "training_rows": "complete public row_role=training count before filtering",
+    "training_rows_values": {
+      "US-MMS": 2970,
+      "US-Ne1": 3504,
+      "US-NR1": 3690
+    },
+    "filtered_counts_require_separate_fields": true
+  },
+  "schema_version": "2.0",
+  "score_ladder": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ]
+}

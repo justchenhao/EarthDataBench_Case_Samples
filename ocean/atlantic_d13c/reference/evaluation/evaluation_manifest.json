@@ -1,0 +1,46 @@
+{
+  "case_id": "ocean/atlantic_d13c_dic_gpr_v03",
+  "files": {
+    "contract.json": {
+      "bytes": 4287,
+      "sha256": "a131f809fda745650720e668b6a3cbfeebdcf5a77b469d01055fe96effc6cf1a"
+    },
+    "core.py": {
+      "bytes": 17677,
+      "sha256": "7ac0a8dac74b45b5137c7d72307e4fc3f41d788aeb1997c7c041ae0619371867"
+    },
+    "data/expert_climatology.nc": {
+      "bytes": 17120245,
+      "sha256": "5ae49b19d7a1eb46744a7a8f6ebe3960c857d036f2cb0afb164f126d682ab8ff"
+    },
+    "data/expert_point_product.csv.gz": {
+      "bytes": 1396387,
+      "sha256": "2891d7ba479f278989952c6a19bc94430980708573683d50c1819ffbc504971e"
+    },
+    "data/expert_qc_observations.csv.gz": {
+      "bytes": 277964,
+      "sha256": "184e0d6f44d49c6aee31a3b0c4f195dc43023c40379a4fc891851ae7b4c9fbaf"
+    },
+    "data/independent_holdout_reference.csv.gz": {
+      "bytes": 14825,
+      "sha256": "16574aef8a68a7778f374ac0504ea701d21c10ad19fa25cd3a3a8d43d290f3c1"
+    },
+    "environment_lock.json": {
+      "bytes": 453,
+      "sha256": "82149c08606a250b7c7036c1a9f977caec6b6ccbf52c568d222f6faa9756288b"
+    },
+    "io_guard.py": {
+      "bytes": 12832,
+      "sha256": "faf3b4cef916dcaa8c9cb12a72b21d8850671f62166273ea05dce4e2a9514529"
+    },
+    "public_support.npz": {
+      "bytes": 445934,
+      "sha256": "61e43f67e9a6da716b691b26b1b8e2731c25b713a0999e2bc451b362ac3119a5"
+    },
+    "verify.py": {
+      "bytes": 2339,
+      "sha256": "57efd90ab815f1bbbb03ecc81ac1a3fa64725a3f222d23f89d30449508674da2"
+    }
+  },
+  "schema_version": "1.0"
+}

@@ -1,0 +1,854 @@
+{
+  "candidate_sha256": "708c4c94002e7fd822abd52b3e7e0df3e0fb1b98cbc4d90f8d61cc3f2aa8dcfc",
+  "case_id": "ecology/sierra_nevada_eft_v09",
+  "case_version": "v0.9",
+  "formal_batch_count": 1,
+  "formal_batch_id": "2026-08-26T15-45-35",
+  "no_post_run_tuning": true,
+  "passed": true,
+  "schema_version": "1.0",
+  "scores": {
+    "base": 0.4,
+    "open": 0.2
+  },
+  "variants": {
+    "base": {
+      "figure": {
+        "bytes": 899689,
+        "mode": "RGBA",
+        "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/base/codex/2026-08-26T15-45-35/output/representative.png",
+        "pixels": [
+          1800,
+          1100
+        ],
+        "sha256": "dd066fc387fc2644f0b3bb0ea6a1f1c2b42b7b7d9acc433ab7587f73199f2da9"
+      },
+      "formal_result": {
+        "agent_id": "codex",
+        "cache_creation_tokens": 0,
+        "cache_read_tokens": 267776,
+        "duration_s": 280.8157341090264,
+        "error": null,
+        "eval_extra": {
+          "detail": "LOW_BRANCH_MIN_C_SIMILARITY_AND_B_FIDELITY",
+          "level": "S2",
+          "metrics": {
+            "agent_vs_expert_product": {
+              "aggregate_similarity": 0.8379567998495703,
+              "components": {
+                "eft_code": 0.9206358648952343,
+                "eft_dissimilarity": 0.9816859389468584,
+                "eft_mode": 0.8913593099345628,
+                "eft_rarity": 0.9438659503155294,
+                "eft_richness": 0.2625,
+                "eft_variability": 0.6461778703152885,
+                "evi_dmax": 0.8953863441073435,
+                "evi_mean": 1.0,
+                "evi_ssd": 0.9999999201313151
+              },
+              "eft_code_exact_fraction": 0.9206358648952343,
+              "eft_interannual_dissimilarity_mae": 0.01831406105314157,
+              "eft_interannual_variability_exact_fraction": 0.6461778703152885,
+              "eft_mode_exact_fraction": 0.8913593099345628,
+              "eft_rarity_mae": 0.05613404968447058,
+              "eft_richness_exact_fraction": 0.2625,
+              "evi_dmax_month_exact_fraction": 0.8953863441073435,
+              "evi_mean_scaled_mae": 0.0,
+              "evi_ssd_scaled_mae": 2.3960605459713135e-05
+            },
+            "decision_order": [
+              "output_contract",
+              "strict_independent_B_superiority",
+              "otherwise_min_C_and_B"
+            ],
+            "independent_validation": {
+              "combined": {
+                "agent": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.96,
+                  "n": 25,
+                  "within_one_month_fraction": 0.76
+                },
+                "agent_gap_to_expert_months": 0.24,
+                "expert": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.72,
+                  "n": 25,
+                  "within_one_month_fraction": 0.96
+                },
+                "improvement_months": -0.24
+              },
+              "relative_fidelity": 0.7500000000002605,
+              "s4": {
+                "agent": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 1.2,
+                  "n": 15,
+                  "within_one_month_fraction": 0.6
+                },
+                "agent_gap_to_expert_months": 0.1333333333333333,
+                "expert": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 1.0666666666666667,
+                  "n": 15,
+                  "within_one_month_fraction": 0.9333333333333333
+                },
+                "improvement_months": -0.1333333333333333
+              },
+              "s5": {
+                "agent": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.6666666666666666,
+                  "n": 6,
+                  "within_one_month_fraction": 1.0
+                },
+                "agent_gap_to_expert_months": 0.3333333333333333,
+                "expert": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.3333333333333333,
+                  "n": 6,
+                  "within_one_month_fraction": 1.0
+                },
+                "improvement_months": -0.3333333333333333
+              }
+            },
+            "tiers": {
+              "b_fidelity": 0.4,
+              "c_similarity": 0.4
+            }
+          },
+          "schema_version": "1.0",
+          "status": "scored"
+        },
+        "evaluation_status": "scored",
+        "exit_code": 0,
+        "input_tokens": 303518,
+        "output_tokens": 13085,
+        "reasoning_output_tokens": 3771,
+        "score": 0.4,
+        "status": "completed",
+        "task_id": "ecology/sierra_nevada_eft_v09",
+        "total_cost_usd": 0.0,
+        "transcript_path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/base/codex/2026-08-26T15-45-35/transcript.jsonl",
+        "variant": "base",
+        "work_dir": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/base/codex/2026-08-26T15-45-35"
+      },
+      "frozen_evaluator_replay": {
+        "detail": "LOW_BRANCH_MIN_C_SIMILARITY_AND_B_FIDELITY",
+        "level": "S2",
+        "metrics": {
+          "agent_vs_expert_product": {
+            "aggregate_similarity": 0.8379567998495703,
+            "components": {
+              "eft_code": 0.9206358648952343,
+              "eft_dissimilarity": 0.9816859389468584,
+              "eft_mode": 0.8913593099345628,
+              "eft_rarity": 0.9438659503155294,
+              "eft_richness": 0.2625,
+              "eft_variability": 0.6461778703152885,
+              "evi_dmax": 0.8953863441073435,
+              "evi_mean": 1.0,
+              "evi_ssd": 0.9999999201313151
+            },
+            "eft_code_exact_fraction": 0.9206358648952343,
+            "eft_interannual_dissimilarity_mae": 0.01831406105314157,
+            "eft_interannual_variability_exact_fraction": 0.6461778703152885,
+            "eft_mode_exact_fraction": 0.8913593099345628,
+            "eft_rarity_mae": 0.05613404968447058,
+            "eft_richness_exact_fraction": 0.2625,
+            "evi_dmax_month_exact_fraction": 0.8953863441073435,
+            "evi_mean_scaled_mae": 0.0,
+            "evi_ssd_scaled_mae": 2.3960605459713135e-05
+          },
+          "decision_order": [
+            "output_contract",
+            "strict_independent_B_superiority",
+            "otherwise_min_C_and_B"
+          ],
+          "independent_validation": {
+            "combined": {
+              "agent": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.96,
+                "n": 25,
+                "within_one_month_fraction": 0.76
+              },
+              "agent_gap_to_expert_months": 0.24,
+              "expert": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.72,
+                "n": 25,
+                "within_one_month_fraction": 0.96
+              },
+              "improvement_months": -0.24
+            },
+            "relative_fidelity": 0.7500000000002605,
+            "s4": {
+              "agent": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 1.2,
+                "n": 15,
+                "within_one_month_fraction": 0.6
+              },
+              "agent_gap_to_expert_months": 0.1333333333333333,
+              "expert": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 1.0666666666666667,
+                "n": 15,
+                "within_one_month_fraction": 0.9333333333333333
+              },
+              "improvement_months": -0.1333333333333333
+            },
+            "s5": {
+              "agent": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.6666666666666666,
+                "n": 6,
+                "within_one_month_fraction": 1.0
+              },
+              "agent_gap_to_expert_months": 0.3333333333333333,
+              "expert": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.3333333333333333,
+                "n": 6,
+                "within_one_month_fraction": 1.0
+              },
+              "improvement_months": -0.3333333333333333
+            }
+          },
+          "tiers": {
+            "b_fidelity": 0.4,
+            "c_similarity": 0.4
+          }
+        },
+        "schema_version": "1.0",
+        "score": 0.4,
+        "status": "scored"
+      },
+      "output_inventory": [
+        {
+          "bytes": 17396,
+          "path": "build_product.py",
+          "sha256": "cbc1de25364a243edfde872d35bb0a506b25354f7095a84a6c99e9363054d319"
+        },
+        {
+          "bytes": 3631,
+          "path": "methodology.md",
+          "sha256": "7b5980b66793f28ac682286b9b60a8bfb410e5b519cda5cfe5e6bb975f0e1640"
+        },
+        {
+          "bytes": 899689,
+          "path": "representative.png",
+          "sha256": "dd066fc387fc2644f0b3bb0ea6a1f1c2b42b7b7d9acc433ab7587f73199f2da9"
+        },
+        {
+          "bytes": 15065284,
+          "path": "sierra_nevada_eft.npz",
+          "sha256": "f31ac06355fc741488cc288d6f23012feaaea8053ef14bfac7de7618b900d8f3"
+        },
+        {
+          "bytes": 392,
+          "path": "thresholds.json",
+          "sha256": "1a972f3f3033ac4b6c6335e2bac513bba7b3b388e3b57b8c64835858cc75024c"
+        }
+      ],
+      "product_statistics": {
+        "eft_code": {
+          "dtype": "uint8",
+          "maximum": 64.0,
+          "minimum": 1.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 16.976118281111383,
+          "unique_count": 64
+        },
+        "eft_interannual_dissimilarity": {
+          "dtype": "float32",
+          "maximum": 0.9250122904777527,
+          "minimum": 0.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 0.14541974498471222,
+          "unique_count": 64406
+        },
+        "eft_interannual_variability": {
+          "dtype": "uint8",
+          "maximum": 17.0,
+          "minimum": 1.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 2.5071199291160036,
+          "unique_count": 17
+        },
+        "eft_mode": {
+          "dtype": "uint8",
+          "maximum": 64.0,
+          "minimum": 1.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 16.754977820148213,
+          "unique_count": 64
+        },
+        "eft_rarity": {
+          "dtype": "float32",
+          "maximum": 0.9982068538665771,
+          "minimum": 0.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 0.28825971239354,
+          "unique_count": 1112
+        },
+        "eft_rarity_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 0.9484379887580872,
+          "minimum": 0.1821143925189972,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 0.1500178949565772,
+          "unique_count": 66410
+        },
+        "eft_richness": {
+          "dtype": "uint8",
+          "maximum": 16.0,
+          "minimum": 0.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 2.694273038157447,
+          "unique_count": 17
+        },
+        "eft_richness_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 12.88888931274414,
+          "minimum": 0.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 2.203468559322154,
+          "unique_count": 209
+        },
+        "evi_dmax_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 12.0,
+          "minimum": 1.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 2.0748877298921693,
+          "unique_count": 12
+        },
+        "evi_dmax_month": {
+          "dtype": "uint8",
+          "maximum": 12.0,
+          "minimum": 1.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 2.7765576334300373,
+          "unique_count": 12
+        },
+        "evi_mean_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 4253.27783203125,
+          "minimum": 128.3333282470703,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 651.1039209616159,
+          "unique_count": 34873
+        },
+        "evi_mean_scaled": {
+          "dtype": "int16",
+          "maximum": 5212.0,
+          "minimum": 46.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 672.7623478861341,
+          "unique_count": 4334
+        },
+        "evi_ssd_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 1877.0555419921875,
+          "minimum": 65.11111450195312,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 183.56886032712293,
+          "unique_count": 13356
+        },
+        "evi_ssd_scaled": {
+          "dtype": "int16",
+          "maximum": 2525.0,
+          "minimum": 17.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 210.96968166190902,
+          "unique_count": 1936
+        }
+      },
+      "resource_usage": {
+        "backend": "sched_affinity_rlimit_as_and_rss_watchdog",
+        "configured": {
+          "cpu_max": 4,
+          "memory_max_bytes": 4294967296,
+          "wall_time_max_seconds": 1800
+        },
+        "duration_s": 280.8157341090264,
+        "exit_code": 0,
+        "measured_peak_process_count": 10,
+        "measured_peak_rss_bytes": 296603648,
+        "memory_limit_exceeded": false,
+        "run_status": "completed",
+        "schema_version": "1.0",
+        "timed_out": false
+      }
+    },
+    "open": {
+      "figure": {
+        "bytes": 982128,
+        "mode": "RGBA",
+        "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/open/codex/2026-08-26T15-45-35/output/representative.png",
+        "pixels": [
+          2700,
+          1650
+        ],
+        "sha256": "8d4da1222ff5ffdded6a3948df228a7b5aa3d244c94e8f21b8414a88de34a729"
+      },
+      "formal_result": {
+        "agent_id": "codex",
+        "cache_creation_tokens": 0,
+        "cache_read_tokens": 145408,
+        "duration_s": 265.49044841201976,
+        "error": null,
+        "eval_extra": {
+          "detail": "LOW_BRANCH_MIN_C_SIMILARITY_AND_B_FIDELITY",
+          "level": "S1",
+          "metrics": {
+            "agent_vs_expert_product": {
+              "aggregate_similarity": 0.5920708763371848,
+              "components": {
+                "eft_code": 0.0,
+                "eft_dissimilarity": 0.9665686632753092,
+                "eft_mode": 0.025416418798334325,
+                "eft_rarity": 0.8795762439413448,
+                "eft_richness": 0.2336117720933307,
+                "eft_variability": 0.3280785246876859,
+                "evi_dmax": 0.8953863441073435,
+                "evi_mean": 1.0,
+                "evi_ssd": 0.9999999201313151
+              },
+              "eft_code_exact_fraction": 0.0,
+              "eft_interannual_dissimilarity_mae": 0.03343133672469078,
+              "eft_interannual_variability_exact_fraction": 0.3280785246876859,
+              "eft_mode_exact_fraction": 0.025416418798334325,
+              "eft_rarity_mae": 0.12042375605865513,
+              "eft_richness_exact_fraction": 0.2336117720933307,
+              "evi_dmax_month_exact_fraction": 0.8953863441073435,
+              "evi_mean_scaled_mae": 0.0,
+              "evi_ssd_scaled_mae": 2.3960605459713135e-05
+            },
+            "decision_order": [
+              "output_contract",
+              "strict_independent_B_superiority",
+              "otherwise_min_C_and_B"
+            ],
+            "independent_validation": {
+              "combined": {
+                "agent": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.96,
+                  "n": 25,
+                  "within_one_month_fraction": 0.76
+                },
+                "agent_gap_to_expert_months": 0.24,
+                "expert": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.72,
+                  "n": 25,
+                  "within_one_month_fraction": 0.96
+                },
+                "improvement_months": -0.24
+              },
+              "relative_fidelity": 0.7500000000002605,
+              "s4": {
+                "agent": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 1.2,
+                  "n": 15,
+                  "within_one_month_fraction": 0.6
+                },
+                "agent_gap_to_expert_months": 0.1333333333333333,
+                "expert": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 1.0666666666666667,
+                  "n": 15,
+                  "within_one_month_fraction": 0.9333333333333333
+                },
+                "improvement_months": -0.1333333333333333
+              },
+              "s5": {
+                "agent": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.6666666666666666,
+                  "n": 6,
+                  "within_one_month_fraction": 1.0
+                },
+                "agent_gap_to_expert_months": 0.3333333333333333,
+                "expert": {
+                  "coverage": 1.0,
+                  "mean_circular_month_error": 0.3333333333333333,
+                  "n": 6,
+                  "within_one_month_fraction": 1.0
+                },
+                "improvement_months": -0.3333333333333333
+              }
+            },
+            "tiers": {
+              "b_fidelity": 0.4,
+              "c_similarity": 0.2
+            }
+          },
+          "schema_version": "1.0",
+          "status": "scored"
+        },
+        "evaluation_status": "scored",
+        "exit_code": 0,
+        "input_tokens": 224263,
+        "output_tokens": 13117,
+        "reasoning_output_tokens": 5083,
+        "score": 0.2,
+        "status": "completed",
+        "task_id": "ecology/sierra_nevada_eft_v09",
+        "total_cost_usd": 0.0,
+        "transcript_path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/open/codex/2026-08-26T15-45-35/transcript.jsonl",
+        "variant": "open",
+        "work_dir": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/open/codex/2026-08-26T15-45-35"
+      },
+      "frozen_evaluator_replay": {
+        "detail": "LOW_BRANCH_MIN_C_SIMILARITY_AND_B_FIDELITY",
+        "level": "S1",
+        "metrics": {
+          "agent_vs_expert_product": {
+            "aggregate_similarity": 0.5920708763371848,
+            "components": {
+              "eft_code": 0.0,
+              "eft_dissimilarity": 0.9665686632753092,
+              "eft_mode": 0.025416418798334325,
+              "eft_rarity": 0.8795762439413448,
+              "eft_richness": 0.2336117720933307,
+              "eft_variability": 0.3280785246876859,
+              "evi_dmax": 0.8953863441073435,
+              "evi_mean": 1.0,
+              "evi_ssd": 0.9999999201313151
+            },
+            "eft_code_exact_fraction": 0.0,
+            "eft_interannual_dissimilarity_mae": 0.03343133672469078,
+            "eft_interannual_variability_exact_fraction": 0.3280785246876859,
+            "eft_mode_exact_fraction": 0.025416418798334325,
+            "eft_rarity_mae": 0.12042375605865513,
+            "eft_richness_exact_fraction": 0.2336117720933307,
+            "evi_dmax_month_exact_fraction": 0.8953863441073435,
+            "evi_mean_scaled_mae": 0.0,
+            "evi_ssd_scaled_mae": 2.3960605459713135e-05
+          },
+          "decision_order": [
+            "output_contract",
+            "strict_independent_B_superiority",
+            "otherwise_min_C_and_B"
+          ],
+          "independent_validation": {
+            "combined": {
+              "agent": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.96,
+                "n": 25,
+                "within_one_month_fraction": 0.76
+              },
+              "agent_gap_to_expert_months": 0.24,
+              "expert": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.72,
+                "n": 25,
+                "within_one_month_fraction": 0.96
+              },
+              "improvement_months": -0.24
+            },
+            "relative_fidelity": 0.7500000000002605,
+            "s4": {
+              "agent": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 1.2,
+                "n": 15,
+                "within_one_month_fraction": 0.6
+              },
+              "agent_gap_to_expert_months": 0.1333333333333333,
+              "expert": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 1.0666666666666667,
+                "n": 15,
+                "within_one_month_fraction": 0.9333333333333333
+              },
+              "improvement_months": -0.1333333333333333
+            },
+            "s5": {
+              "agent": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.6666666666666666,
+                "n": 6,
+                "within_one_month_fraction": 1.0
+              },
+              "agent_gap_to_expert_months": 0.3333333333333333,
+              "expert": {
+                "coverage": 1.0,
+                "mean_circular_month_error": 0.3333333333333333,
+                "n": 6,
+                "within_one_month_fraction": 1.0
+              },
+              "improvement_months": -0.3333333333333333
+            }
+          },
+          "tiers": {
+            "b_fidelity": 0.4,
+            "c_similarity": 0.2
+          }
+        },
+        "schema_version": "1.0",
+        "score": 0.2,
+        "status": "scored"
+      },
+      "output_inventory": [
+        {
+          "bytes": 21070,
+          "path": "build_product.py",
+          "sha256": "25097b0134926ef77cd43ed9e75873c9faeee094cd635f63c7bf4db157b562b4"
+        },
+        {
+          "bytes": 4122,
+          "path": "methodology.md",
+          "sha256": "56db700bad5679d1f55a720861799946e7800c39a193b97a75e83e3907866d87"
+        },
+        {
+          "bytes": 982128,
+          "path": "representative.png",
+          "sha256": "8d4da1222ff5ffdded6a3948df228a7b5aa3d244c94e8f21b8414a88de34a729"
+        },
+        {
+          "bytes": 7107603,
+          "path": "sierra_nevada_eft.npz",
+          "sha256": "6fde60d996eb6b8871a9136348a07916fe2812994b2ecd564e09f4f5e472a8c3"
+        },
+        {
+          "bytes": 352,
+          "path": "thresholds.json",
+          "sha256": "59e2e9b952e088d1d15a9db9172a6f9fbcd8fd338e87d21952d23f4e9a60f7ab"
+        }
+      ],
+      "product_statistics": {
+        "eft_code": {
+          "dtype": "uint8",
+          "maximum": 64.0,
+          "minimum": 1.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 16.812229136178736,
+          "unique_count": 64
+        },
+        "eft_interannual_dissimilarity": {
+          "dtype": "float32",
+          "maximum": 0.9187546968460083,
+          "minimum": 0.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 0.13987273094392255,
+          "unique_count": 64460
+        },
+        "eft_interannual_variability": {
+          "dtype": "uint8",
+          "maximum": 16.0,
+          "minimum": 1.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 2.349073700132174,
+          "unique_count": 16
+        },
+        "eft_mode": {
+          "dtype": "uint8",
+          "maximum": 64.0,
+          "minimum": 1.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 16.445215820758275,
+          "unique_count": 64
+        },
+        "eft_rarity": {
+          "dtype": "float32",
+          "maximum": 0.9982283115386963,
+          "minimum": 0.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 0.28080511388066975,
+          "unique_count": 1119
+        },
+        "eft_rarity_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 0.935937762260437,
+          "minimum": 0.14308124780654907,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 0.1548205381164112,
+          "unique_count": 66741
+        },
+        "eft_richness": {
+          "dtype": "uint8",
+          "maximum": 16.0,
+          "minimum": 0.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 2.7566573998721724,
+          "unique_count": 17
+        },
+        "eft_richness_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 12.94444465637207,
+          "minimum": 0.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 2.245176284758249,
+          "unique_count": 205
+        },
+        "evi_dmax_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 12.0,
+          "minimum": 1.0,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 2.0756296008851267,
+          "unique_count": 12
+        },
+        "evi_dmax_month": {
+          "dtype": "uint8",
+          "maximum": 12.0,
+          "minimum": 1.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 2.7765576334300373,
+          "unique_count": 12
+        },
+        "evi_mean_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 4253.27783203125,
+          "minimum": 128.3333282470703,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 651.1039209616159,
+          "unique_count": 34873
+        },
+        "evi_mean_scaled": {
+          "dtype": "int16",
+          "maximum": 5212.0,
+          "minimum": 46.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 672.7623478861341,
+          "unique_count": 4334
+        },
+        "evi_ssd_interannual_mean": {
+          "dtype": "float32",
+          "maximum": 1877.0555419921875,
+          "minimum": 65.11111450195312,
+          "shape": [
+            164,
+            410
+          ],
+          "std": 183.56886032712293,
+          "unique_count": 13356
+        },
+        "evi_ssd_scaled": {
+          "dtype": "int16",
+          "maximum": 2525.0,
+          "minimum": 17.0,
+          "shape": [
+            18,
+            164,
+            410
+          ],
+          "std": 210.96968166190902,
+          "unique_count": 1936
+        }
+      },
+      "resource_usage": {
+        "backend": "sched_affinity_rlimit_as_and_rss_watchdog",
+        "configured": {
+          "cpu_max": 4,
+          "memory_max_bytes": 4294967296,
+          "wall_time_max_seconds": 1800
+        },
+        "duration_s": 265.49044841201976,
+        "exit_code": 0,
+        "measured_peak_process_count": 9,
+        "measured_peak_rss_bytes": 325849088,
+        "memory_limit_exceeded": false,
+        "run_status": "completed",
+        "schema_version": "1.0",
+        "timed_out": false
+      }
+    }
+  }
+}

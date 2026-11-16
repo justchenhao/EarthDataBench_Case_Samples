@@ -1,0 +1,54 @@
+{
+  "schema_version": "hust-grace2024.v24.output.v1",
+  "case_id": "solid_earth/hust_grace2024_paper_evaluation_v24",
+  "formal_deliverables": [
+    "low_degree_monthly.csv",
+    "degree_spectrum.csv",
+    "method.json",
+    "low_degree_validation.png",
+    "solution.py"
+  ],
+  "no_extra_files_or_directories": true,
+  "low_degree_columns": [
+    "month",
+    "author_c20_1e10",
+    "enhanced_c20_1e10",
+    "author_c30_1e10",
+    "enhanced_c30_1e10"
+  ],
+  "low_degree_rows": 214,
+  "spectrum_columns": [
+    "month",
+    "degree",
+    "rms_power",
+    "formal_rms_power"
+  ],
+  "spectrum_rows": 12626,
+  "degree_range": [
+    2,
+    60
+  ],
+  "damaged_coefficient_restoration": "component-wise mean from nearest earlier and later available paper-window months for the same degree/order",
+  "method_required_values": {
+    "schema_version": "hust-grace2024-v24-method-v1",
+    "input_archive": "HUST-Grace2024-n60.zip",
+    "archive_member_count": 255,
+    "evaluation_window_count": 214,
+    "normalization": "fully_normalized",
+    "tide_system": "zero_tide"
+  },
+  "figure": {
+    "format": "PNG",
+    "required_support": [
+      "C20 UTC series",
+      "C30 UTC series",
+      "degree spectrum"
+    ],
+    "labels_and_units": true
+  },
+  "replay": {
+    "command": "python output/solution.py --input input --output <new-empty-directory>",
+    "network": "prohibited",
+    "non_code_file_set_exact": true
+  }
+}

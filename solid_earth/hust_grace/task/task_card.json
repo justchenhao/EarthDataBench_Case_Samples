@@ -1,0 +1,26 @@
+{
+  "taskId": "solid_earth/hust_grace2024_paper_evaluation_v24",
+  "title": "HUST-Grace2024 Monthly Low-Degree Anomalies and Degree Spectra, 2002–2022",
+  "summary": "Reconstruct 214 paper-window monthly C20/C30 anomaly pairs and degree-2-to-60 geodetic RMS coefficient spectra from the complete 255-member official HUST-Grace2024 n60 archive, including deterministic recovery of the damaged member.",
+  "variants": {
+    "base": "task/task_prompt_base.md",
+    "open": "task/task_prompt_open.md"
+  },
+  "inputFiles": [
+    "input/HUST-Grace2024-n60.zip",
+    "input/definition_contract.json"
+  ],
+  "outputContract": "task/output_contract.json",
+  "evaluation": "Evaluation checks exact delivery and schemas, physical validity, month/degree coverage, damaged-member recovery, missing-month behavior, figure readability, isolated reproducibility, expert-product consistency, and independent validation of the submitted enhanced low-degree series. Private references, support, numerical thresholds, and scoring implementation are not disclosed.",
+  "max_score": 1.0,
+  "validation_fidelity": "unavailable",
+  "referenceProvenance": "published_product",
+  "referenceNotes": "C is deterministically derived from the official author HUST-Grace2024 GFC archive using the declared low-degree anomaly and degree-spectrum formulas; no new predictive model is fitted.",
+  "scoreSemantics": {
+    "0.2": "Minimum usability",
+    "0.4": "Scientific consistency",
+    "0.6": "Expert-level quality (C tolerance AND B non-inferiority)",
+    "0.8": "Beyond-expert (0.6 gates AND prespecified B improvement)",
+    "1.0": "Stronger improvement (0.8 gates AND second independent axis or stronger frozen B evidence)"
+  }
+}

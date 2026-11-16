@@ -1,0 +1,524 @@
+{
+  "aggregation": "author-method reconstruction: mean 2012-2018 area; AR and MAR structure values summed where both are populated",
+  "baseline_metrics": {
+    "comparison_pairs": 224,
+    "country_r_squared_by_crop": {
+      "cereals": 0.983770849484,
+      "corn": 0.991836280039,
+      "forage_legumes": 0.868434975333,
+      "pulses": 0.970647404578,
+      "rapeseed": 0.985702056226,
+      "root_crops": 0.94775802068,
+      "sunflower": 0.969644105042,
+      "temporary_grasslands": 0.743792824456
+    },
+    "eu_r_squared": 0.990397366584,
+    "global_nrmse": 0.126642887726
+  },
+  "countries": [
+    "AT",
+    "BE",
+    "BG",
+    "CY",
+    "CZ",
+    "DE",
+    "DK",
+    "EE",
+    "EL",
+    "ES",
+    "FI",
+    "FR",
+    "HU",
+    "IE",
+    "IT",
+    "LT",
+    "LU",
+    "LV",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SE",
+    "SI",
+    "SK",
+    "UK"
+  ],
+  "geographies": {
+    "AT": {
+      "arable_land_mean": 1407.6128571428574,
+      "observed": {
+        "cereals": 580.8428571428573,
+        "corn": 294.30428571428575,
+        "forage_legumes": 81.14714285714285,
+        "pulses": 73.32285714285716,
+        "rapeseed": 46.48428571428571,
+        "root_crops": 133.20285714285714,
+        "sunflower": 20.92571428571429,
+        "temporary_grasslands": 55.551428571428566
+      }
+    },
+    "BE": {
+      "arable_land_mean": 984.4785714285715,
+      "observed": {
+        "cereals": 268.79857142857145,
+        "corn": 233.8442857142857,
+        "forage_legumes": 3.845714285714286,
+        "pulses": 2.6042857142857145,
+        "rapeseed": 11.985714285714286,
+        "root_crops": 282.75142857142856,
+        "sunflower": 0.0,
+        "temporary_grasslands": 80.78285714285714
+      }
+    },
+    "BG": {
+      "arable_land_mean": 3288.5242857142853,
+      "observed": {
+        "cereals": 1408.4657142857145,
+        "corn": 463.53285714285715,
+        "forage_legumes": 83.49428571428572,
+        "pulses": 43.94857142857143,
+        "rapeseed": 163.50714285714284,
+        "root_crops": 24.3,
+        "sunflower": 831.2757142857143,
+        "temporary_grasslands": 1.02
+      }
+    },
+    "CY": {
+      "arable_land_mean": 94.11714285714287,
+      "observed": {
+        "cereals": 27.82571428571429,
+        "corn": 0.2457142857142857,
+        "forage_legumes": 2.1214285714285714,
+        "pulses": 0.41714285714285715,
+        "rapeseed": 0.0,
+        "root_crops": 9.325714285714286,
+        "sunflower": 0.0,
+        "temporary_grasslands": 0.31428571428571433
+      }
+    },
+    "CZ": {
+      "arable_land_mean": 2583.2857142857147,
+      "observed": {
+        "cereals": 1295.7585714285713,
+        "corn": 321.7228571428572,
+        "forage_legumes": 159.66857142857143,
+        "pulses": 39.71142857142858,
+        "rapeseed": 396.38000000000005,
+        "root_crops": 171.13714285714283,
+        "sunflower": 19.631428571428568,
+        "temporary_grasslands": 36.58857142857143
+      }
+    },
+    "DE": {
+      "arable_land_mean": 11771.947142857143,
+      "observed": {
+        "cereals": 5308.171428571428,
+        "corn": 2554.6857142857143,
+        "forage_legumes": 271.3428571428571,
+        "pulses": 140.78571428571428,
+        "rapeseed": 1330.6285714285714,
+        "root_crops": 1230.7714285714287,
+        "sunflower": 20.128571428571426,
+        "temporary_grasslands": 315.4142857142857
+      }
+    },
+    "DK": {
+      "arable_land_mean": 2350.2042857142856,
+      "observed": {
+        "cereals": 1403.2399999999998,
+        "corn": 188.1,
+        "forage_legumes": 2.6142857142857143,
+        "pulses": 14.742857142857142,
+        "rapeseed": 164.18571428571428,
+        "root_crops": 159.19714285714284,
+        "sunflower": 0.0,
+        "temporary_grasslands": 242.81428571428572
+      }
+    },
+    "EE": {
+      "arable_land_mean": 660.5600000000001,
+      "observed": {
+        "cereals": 331.0585714285714,
+        "corn": 7.4557142857142855,
+        "forage_legumes": 44.53142857142857,
+        "pulses": 34.68714285714286,
+        "rapeseed": 77.22428571428573,
+        "root_crops": 8.208571428571428,
+        "sunflower": 0.0,
+        "temporary_grasslands": 107.78285714285714
+      }
+    },
+    "EL": {
+      "arable_land_mean": 1971.5700000000002,
+      "observed": {
+        "cereals": 761.347142857143,
+        "corn": 235.73,
+        "forage_legumes": 21.59,
+        "pulses": 77.37428571428572,
+        "rapeseed": 2.987142857142857,
+        "root_crops": 54.028571428571425,
+        "sunflower": 90.99714285714286,
+        "temporary_grasslands": 110.21857142857142
+      }
+    },
+    "ES": {
+      "arable_land_mean": 12396.121428571429,
+      "observed": {
+        "cereals": 5596.391428571429,
+        "corn": 488.6771428571428,
+        "forage_legumes": 410.8442857142857,
+        "pulses": 461.9057142857143,
+        "rapeseed": 64.48428571428572,
+        "root_crops": 215.55999999999997,
+        "sunflower": 753.4914285714285,
+        "temporary_grasslands": 282.4271428571428
+      }
+    },
+    "EU": {
+      "arable_land_mean": 106776.39285714286,
+      "observed": {
+        "cereals": 46787.00714285713,
+        "corn": 14936.704285714286,
+        "forage_legumes": 3444.2400000000002,
+        "pulses": 2625.341428571428,
+        "rapeseed": 6583.001428571429,
+        "root_crops": 6599.215714285713,
+        "sunflower": 4230.2414285714285,
+        "temporary_grasslands": 8939.151428571427
+      }
+    },
+    "FI": {
+      "arable_land_mean": 2170.781428571429,
+      "observed": {
+        "cereals": 1004.5785714285715,
+        "corn": 0.0,
+        "forage_legumes": 0.6142857142857142,
+        "pulses": 18.985714285714288,
+        "rapeseed": 53.89999999999999,
+        "root_crops": 67.4,
+        "sunflower": 0.0,
+        "temporary_grasslands": 617.7571428571429
+      }
+    },
+    "FR": {
+      "arable_land_mean": 19025.691428571427,
+      "observed": {
+        "cereals": 7726.582857142857,
+        "corn": 3052.2728571428565,
+        "forage_legumes": 300.25428571428574,
+        "pulses": 377.7442857142857,
+        "rapeseed": 1518.0157142857145,
+        "root_crops": 1192.0014285714283,
+        "sunflower": 628.8785714285715,
+        "temporary_grasslands": 2980.871428571428
+      }
+    },
+    "HU": {
+      "arable_land_mean": 4227.654285714285,
+      "observed": {
+        "cereals": 1514.6799999999998,
+        "corn": 1186.2371428571428,
+        "forage_legumes": 174.46,
+        "pulses": 77.99285714285715,
+        "rapeseed": 241.0142857142857,
+        "root_crops": 70.97857142857143,
+        "sunflower": 622.6471428571429,
+        "temporary_grasslands": 23.45
+      }
+    },
+    "IE": {
+      "arable_land_mean": 477.4928571428572,
+      "observed": {
+        "cereals": 290.2342857142857,
+        "corn": 13.652857142857142,
+        "forage_legumes": 0.5714285714285714,
+        "pulses": 8.212857142857143,
+        "rapeseed": 11.442857142857141,
+        "root_crops": 18.33142857142857,
+        "sunflower": 0.0014285714285714286,
+        "temporary_grasslands": 97.25428571428573
+      }
+    },
+    "IT": {
+      "arable_land_mean": 6472.812857142856,
+      "observed": {
+        "cereals": 2279.825714285714,
+        "corn": 1090.492857142857,
+        "forage_legumes": 851.2971428571428,
+        "pulses": 341.64428571428573,
+        "rapeseed": 14.54857142857143,
+        "root_crops": 176.20142857142855,
+        "sunflower": 113.45,
+        "temporary_grasslands": 599.0414285714286
+      }
+    },
+    "LT": {
+      "arable_land_mean": 2209.4785714285717,
+      "observed": {
+        "cereals": 1239.702857142857,
+        "corn": 39.71285714285714,
+        "forage_legumes": 48.042857142857144,
+        "pulses": 142.35714285714286,
+        "rapeseed": 205.47,
+        "root_crops": 81.57714285714285,
+        "sunflower": 0.0,
+        "temporary_grasslands": 322.0071428571428
+      }
+    },
+    "LU": {
+      "arable_land_mean": 62.50428571428571,
+      "observed": {
+        "cereals": 27.51571428571429,
+        "corn": 14.919999999999998,
+        "forage_legumes": 0.7828571428571429,
+        "pulses": 0.45000000000000007,
+        "rapeseed": 3.9128571428571424,
+        "root_crops": 1.2228571428571429,
+        "sunflower": 0.0,
+        "temporary_grasslands": 12.411428571428571
+      }
+    },
+    "LV": {
+      "arable_land_mean": 1125.3285714285712,
+      "observed": {
+        "cereals": 638.4428571428571,
+        "corn": 22.642857142857142,
+        "forage_legumes": 12.814285714285713,
+        "pulses": 27.842857142857145,
+        "rapeseed": 108.38571428571427,
+        "root_crops": 37.65714285714285,
+        "sunflower": 0.0,
+        "temporary_grasslands": 201.08571428571432
+      }
+    },
+    "MT": {
+      "arable_land_mean": 8.458571428571428,
+      "observed": {
+        "cereals": 0.0,
+        "corn": 0.0,
+        "forage_legumes": 0.0,
+        "pulses": 0.0,
+        "rapeseed": 0.0,
+        "root_crops": 1.4285714285714286,
+        "sunflower": 0.0,
+        "temporary_grasslands": 0.0
+      }
+    },
+    "NL": {
+      "arable_land_mean": 1268.5957142857144,
+      "observed": {
+        "cereals": 170.8585714285714,
+        "corn": 233.78285714285715,
+        "forage_legumes": 34.47,
+        "pulses": 1.8285714285714285,
+        "rapeseed": 2.261428571428571,
+        "root_crops": 463.4414285714285,
+        "sunflower": 0.31285714285714283,
+        "temporary_grasslands": 228.01
+      }
+    },
+    "PL": {
+      "arable_land_mean": 10908.408571428572,
+      "observed": {
+        "cereals": 6460.255714285714,
+        "corn": 1166.8671428571429,
+        "forage_legumes": 175.4542857142857,
+        "pulses": 258.34000000000003,
+        "rapeseed": 874.4557142857142,
+        "root_crops": 1037.9714285714285,
+        "sunflower": 2.781428571428571,
+        "temporary_grasslands": 226.39714285714285
+      }
+    },
+    "PT": {
+      "arable_land_mean": 1180.1914285714286,
+      "observed": {
+        "cereals": 146.14857142857144,
+        "corn": 177.42428571428573,
+        "forage_legumes": 12.677142857142858,
+        "pulses": 15.777142857142858,
+        "rapeseed": 0.0,
+        "root_crops": 48.23142857142857,
+        "sunflower": 16.10857142857143,
+        "temporary_grasslands": 57.487142857142864
+      }
+    },
+    "RO": {
+      "arable_land_mean": 8945.728571428572,
+      "observed": {
+        "cereals": 2819.0271428571427,
+        "corn": 2593.5928571428567,
+        "forage_legumes": 646.1142857142856,
+        "pulses": 192.24428571428567,
+        "rapeseed": 406.15714285714284,
+        "root_crops": 441.01142857142855,
+        "sunflower": 1028.4871428571428,
+        "temporary_grasslands": 24.211428571428574
+      }
+    },
+    "SE": {
+      "arable_land_mean": 2618.0385714285717,
+      "observed": {
+        "cereals": 992.15,
+        "corn": 17.11714285714286,
+        "forage_legumes": 0.74,
+        "pulses": 43.18714285714286,
+        "rapeseed": 104.35857142857142,
+        "root_crops": 111.21714285714286,
+        "sunflower": 0.0,
+        "temporary_grasslands": 1081.1571428571428
+      }
+    },
+    "SI": {
+      "arable_land_mean": 186.22142857142856,
+      "observed": {
+        "cereals": 59.76857142857143,
+        "corn": 67.46142857142857,
+        "forage_legumes": 7.915714285714286,
+        "pulses": 2.2871428571428574,
+        "rapeseed": 4.065714285714285,
+        "root_crops": 6.502857142857144,
+        "sunflower": 0.24,
+        "temporary_grasslands": 24.8
+      }
+    },
+    "SK": {
+      "arable_land_mean": 1357.9142857142856,
+      "observed": {
+        "cereals": 549.2071428571429,
+        "corn": 282.5728571428571,
+        "forage_legumes": 82.80999999999999,
+        "pulses": 44.99,
+        "rapeseed": 131.00285714285715,
+        "root_crops": 59.529999999999994,
+        "sunflower": 80.88428571428571,
+        "temporary_grasslands": 63.91285714285714
+      }
+    },
+    "UK": {
+      "arable_land_mean": 7022.669999999999,
+      "observed": {
+        "cereals": 3886.128571428572,
+        "corn": 189.6557142857143,
+        "forage_legumes": 14.021428571428572,
+        "pulses": 181.95714285714286,
+        "rapeseed": 646.1428571428571,
+        "root_crops": 496.0285714285714,
+        "sunflower": 0.0,
+        "temporary_grasslands": 1146.3828571428571
+      }
+    }
+  },
+  "group_codes": {
+    "cereals": [
+      "C1110",
+      "C1120",
+      "C1210",
+      "C1220",
+      "C1300",
+      "C1410",
+      "C1420",
+      "C1600",
+      "C1900"
+    ],
+    "corn": [
+      "C1500",
+      "G3000"
+    ],
+    "forage_legumes": [
+      "G2000"
+    ],
+    "pulses": [
+      "I1130",
+      "P1100",
+      "P1200",
+      "P1300",
+      "P9000"
+    ],
+    "rapeseed": [
+      "I1110"
+    ],
+    "root_crops": [
+      "R1000",
+      "R2000",
+      "R3000"
+    ],
+    "sunflower": [
+      "I1120"
+    ],
+    "temporary_grasslands": [
+      "G1000"
+    ]
+  },
+  "schema_version": "1.0",
+  "selection_codes": [
+    "C1110",
+    "C1120",
+    "C1210",
+    "C1220",
+    "C1300",
+    "C1410",
+    "C1420",
+    "C1500",
+    "C1600",
+    "C1700",
+    "C1900",
+    "C2000",
+    "E0000",
+    "G1000",
+    "G2000",
+    "G3000",
+    "G9100",
+    "G9900",
+    "I1110",
+    "I1120",
+    "I1130",
+    "I1140",
+    "I1150",
+    "I1190",
+    "I2100",
+    "I2200",
+    "I2300",
+    "I2900",
+    "I3000",
+    "I4000",
+    "I5000",
+    "I6000",
+    "I9000",
+    "N0000",
+    "P1100",
+    "P1200",
+    "P1300",
+    "P9000",
+    "Q0000",
+    "R1000",
+    "R2000",
+    "R9000",
+    "S0000",
+    "V0000"
+  ],
+  "snapshot_updated": "2026-07-20T23:00:00+0200",
+  "source_files": [
+    {
+      "name": "eurostat_apro_cpsh1_ar_2012_2018.json",
+      "sha256": "429c03f0c3fb24691209305aaf5d907143e8eb658cb32e4e33977989259b1ddf",
+      "structure": "AR_THS_HA"
+    },
+    {
+      "name": "eurostat_apro_cpsh1_mar_2012_2018.json",
+      "sha256": "239eb81f4ab9e6085a4329e53736c4c7e53544a069037effdc1bd3b1441f7222",
+      "structure": "MAR_THS_HA"
+    }
+  ],
+  "validation_fidelity": "reconstructed",
+  "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+  ]
+}

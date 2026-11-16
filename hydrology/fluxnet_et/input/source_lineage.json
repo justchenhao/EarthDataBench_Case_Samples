@@ -1,0 +1,66 @@
+{
+  "bounded_scope": {
+    "sites": [
+      "US-MMS",
+      "US-Ne1",
+      "US-NR1"
+    ],
+    "target_period": "2015-01-01 through 2022-12-31",
+    "target_rows": 8766,
+    "training_periods": "2000-02-18 through 2014-12-31"
+  },
+  "case_id": "hydrology/fluxnet2015_et_benchmark_v05",
+  "paper_doi": "10.5194/essd-17-3835-2025",
+  "paper_product": "A benchmark dataset for global evapotranspiration estimation based on FLUXNET2015 from 2000 to 2022",
+  "public_joined_input": {
+    "path": "input/daily_predictors_and_training.csv.gz",
+    "role": "pre-extracted, site/date-aligned public feature and training-label table; no target labels",
+    "sha256": "dc46e52754fe0e1d9c2a3ab7bf9f417c519732304ec9742b03a68c5f4b0b6c0e"
+  },
+  "required_paper_sources": [
+    {
+      "columns": [
+        "site_id",
+        "date",
+        "le_training_w_m2",
+        "training_missing_ratio"
+      ],
+      "official_url": "https://fluxnet.org/data/fluxnet2015-dataset/",
+      "public_materialization": "three-site bounded rows in the joined input",
+      "role": "eddy-covariance LE observations, site selection and training labels",
+      "source_id": "FLUXNET2015"
+    },
+    {
+      "columns": [
+        "ta_c",
+        "ws_m_s",
+        "rh_percent",
+        "sw_in_w_m2",
+        "lw_in_w_m2",
+        "pa_kpa"
+      ],
+      "official_url": "https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5-land",
+      "paper_resolution": "0.1 degree, hourly",
+      "public_materialization": "site/date-aligned values in the joined input; raw granules are not redistributed in this bounded package",
+      "role": "meteorological reference predictors",
+      "source_id": "ERA5-Land"
+    },
+    {
+      "columns": [
+        "ndvi"
+      ],
+      "official_url": "https://lpdaac.usgs.gov/products/myd13q1v061/",
+      "paper_resolution": "250 m, 16 day, daily Savitzky-Golay resampling",
+      "public_materialization": "site/date-aligned values in the joined input; raw granules are not redistributed in this bounded package",
+      "role": "remote-sensing vegetation predictor",
+      "source_id": "MODIS MYD13Q1.061"
+    }
+  ],
+  "schema_version": "1.0",
+  "source_completeness": "All three paper source families are explicitly represented by column-level lineage in the public joined input. This is a bounded reconstruction and does not claim raw global ERA5-Land or MYD13Q1 archive redistribution.",
+  "target_not_claimed": [
+    "64-site global product",
+    "2000-2022 full released archive",
+    "spatially independent tower generalization"
+  ]
+}

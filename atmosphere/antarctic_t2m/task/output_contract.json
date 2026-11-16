@@ -1,0 +1,171 @@
+{
+  "contractVersion": "1.0",
+  "taskId": "atmosphere/antarctic_monthly_t2m_reconstruction",
+  "status": "candidate",
+  "requiredArtifacts": [
+    {
+      "path": "output/antarctic_t2m_anomaly.nc",
+      "mediaType": "application/x-netcdf",
+      "hardRequired": true
+    },
+    {
+      "path": "output/representative.png",
+      "mediaType": "image/png",
+      "hardRequired": true
+    },
+    {
+      "path": "output/method_report.md",
+      "mediaType": "text/markdown",
+      "hardRequired": true
+    },
+    {
+      "path": "output/reproduce.py",
+      "mediaType": "text/x-python",
+      "hardRequired": true
+    }
+  ],
+  "mainProduct": {
+    "path": "output/antarctic_t2m_anomaly.nc",
+    "format": "NETCDF4",
+    "dimensions": {
+      "order": [
+        "time",
+        "south_north",
+        "west_east"
+      ],
+      "sizes": {
+        "time": 780,
+        "south_north": 114,
+        "west_east": 114
+      }
+    },
+    "coordinates": {
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "dtype": "float64",
+        "units": "days since 1951-01-01 00:00:00",
+        "calendar": "standard",
+        "frequency": "monthly_first_day",
+        "start": "1958-01-01",
+        "end": "2022-12-01"
+      },
+      "lat": {
+        "dimensions": [
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "degrees_north",
+        "source": "input/grid/grid_template.nc:lat",
+        "equality": "exact_values"
+      },
+      "lon": {
+        "dimensions": [
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "degrees_east",
+        "source": "input/grid/grid_template.nc:lon",
+        "equality": "exact_values"
+      }
+    },
+    "variables": {
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "dtype": "float64",
+        "units": "days since 1951-01-01 00:00:00"
+      },
+      "lat": {
+        "dimensions": [
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "degrees_north"
+      },
+      "lon": {
+        "dimensions": [
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "degrees_east"
+      },
+      "HGT": {
+        "dimensions": [
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "m",
+        "source": "input/grid/grid_template.nc:HGT",
+        "equality": "exact_values"
+      },
+      "LANDMASK": {
+        "dimensions": [
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "1",
+        "source": "input/grid/grid_template.nc:LANDMASK",
+        "equality": "exact_values"
+      },
+      "t2m_anomaly": {
+        "dimensions": [
+          "time",
+          "south_north",
+          "west_east"
+        ],
+        "dtype": "float32",
+        "units": "K",
+        "fillValue": -999.9,
+        "referencePeriod": "1981-01 through 2010-12, separately by calendar month",
+        "requiredCoverage": "finite for all 780 months where LANDMASK >= 0.1; gridded field-quality core remains LANDMASK >= 0.5; outside may be finite or fill with a static mask"
+      }
+    }
+  },
+  "figure": {
+    "path": "output/representative.png",
+    "format": "PNG",
+    "plotContract": "Arithmetic mean of the 12 submitted t2m_anomaly fields in calendar year 2022; mask LANDMASK < 0.5; plot on template polar-stereographic x/y coordinates in km with equal aspect; RdBu_r colormap; fixed limits -2.5 to 2.5 K; include colorbar, title, and axis labels; overlay no external data.",
+    "mapProjection": {
+      "name": "WRF_polar_stereographic_south",
+      "dxMeters": 60000,
+      "dyMeters": 60000,
+      "centerLatitude": -90.0,
+      "standardLongitude": 0.0,
+      "trueLatitude1": -60.1,
+      "trueLatitude2": -60.0
+    }
+  },
+  "independentValidation": {
+    "submittedTarget": "t2m_anomaly",
+    "comparisonVariable": "t2m_anomaly",
+    "comparisonVariableSource": "submitted_target",
+    "submittedIntermediateUsedAsValidationTarget": false,
+    "derivationMethod": "none",
+    "publicQueryKeys": [],
+    "matchingSupport": "private",
+    "observationValues": "private",
+    "thresholds": "private",
+    "timeSupport": "intersection of the submitted task period and each station record",
+    "monthlyMetrics": "bias, RMSE, linearly detrended Pearson r, and centered fractional variance R2 on paired finite months",
+    "trendAggregation": "annual means with at least 9 paired months; at least 10 annual means per station; omitted when the task period cannot support a trend",
+    "publicSpatialCoverageRequirement": "finite wherever LANDMASK >= 0.1; private station identities and exact matches remain hidden"
+  },
+  "hardFailures": [
+    "missing_or_unreadable_main_product",
+    "missing_t2m_anomaly_variable",
+    "dimension_or_monthly_time_axis_mismatch",
+    "spatial_coordinates_or_support_variables_not_equal_to_template",
+    "insufficient_finite_coverage_where_landmask_at_least_0p1",
+    "missing_or_invalid_representative_figure",
+    "missing_method_report_or_reproduction_code"
+  ]
+}

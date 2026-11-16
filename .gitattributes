@@ -1,0 +1,4 @@
+atmosphere/antarctic_t2m/input/era5/era5_monthly_t2m_global_1979_2022.grib filter=lfs diff=lfs merge=lfs -text
+atmosphere/antarctic_t2m/input/stations/ghcnm/ghcnm.tavg.v4.0.1.20260812.qcf.dat filter=lfs diff=lfs merge=lfs -text
+atmosphere/antarctic_t2m/input/stations/ghcnm/ghcnm.tavg.v4.0.1.20260812.qfe.dat filter=lfs diff=lfs merge=lfs -text
+land/lucas_crop/input/lucas_harmo_uf.zip filter=lfs diff=lfs merge=lfs -text

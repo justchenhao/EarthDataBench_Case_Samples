@@ -1,0 +1,47 @@
+{
+  "schema_version": "hust-grace2024-v24-definition-v1",
+  "case_id": "solid_earth/hust_grace2024_paper_evaluation_v24",
+  "paper_doi": "10.5194/essd-16-3261-2024",
+  "target": "Reconstruct monthly C20/C30 anomalies and degree-2-to-60 coefficient spectra from the complete official HUST-Grace2024 n60 archive for 200204-202212.",
+  "input": {
+    "archive": "input/HUST-Grace2024-n60.zip",
+    "archive_members": 255,
+    "evaluation_start": "200204",
+    "evaluation_end": "202212",
+    "evaluation_members": 214,
+    "normalization": "fully_normalized",
+    "tide_system": "zero_tide"
+  },
+  "product": {
+    "low_degree_anomaly_scale": 10000000000.0,
+    "low_degree_terms": ["C20", "C30"],
+    "enhanced_triplet_weights": [0.25, 0.5, 0.25],
+    "gap_policy": "Smooth only complete consecutive calendar triplets; preserve missing months and retain the original value otherwise; recenter each enhanced series over all 214 included months.",
+    "degree_range": [2, 60],
+    "rms_power_formula": "sqrt(sum(C_lm^2 + S_lm^2 for usable orders m) / (2*l + 1))",
+    "formal_rms_power_formula": "sqrt(sum(sigma_C_lm^2 + sigma_S_lm^2 for usable orders m) / (2*l + 1))",
+    "corrupt_row_policy": "Record malformed or CRC-affected rows; for every missing triangular coefficient, use the component-wise arithmetic mean of the nearest earlier and later available paper-window months for the same degree/order, then compute degree power with the full 2*l+1 denominator."
+  },
+  "deliverables": [
+    "solution.py",
+    "low_degree_monthly.csv",
+    "degree_spectrum.csv",
+    "method.json",
+    "low_degree_validation.png"
+  ],
+  "method_json_required_values": {
+    "schema_version": "hust-grace2024-v24-method-v1",
+    "input_archive": "HUST-Grace2024-n60.zip",
+    "archive_member_count": 255,
+    "evaluation_window_count": 214,
+    "normalization": "fully_normalized",
+    "tide_system": "zero_tide"
+  },
+  "public_private_boundary": {
+    "A": "Official HUST-Grace2024 n60 archive and this definition contract are public production inputs.",
+    "B": "NASA GSFC TN-14 C20/C30 SLR series is private independent validation and is never mounted to the Agent.",
+    "C": "Author reconstruction tables derived before T2 are private expert references and are never mounted to the Agent.",
+    "D": "Base/Open prompts and runtime input expose only A.",
+    "E": "Evaluator and thresholds remain private until scoring/release policy permits."
+  }
+}

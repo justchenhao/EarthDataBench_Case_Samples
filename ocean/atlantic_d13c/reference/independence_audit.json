@@ -1,0 +1,38 @@
+{
+  "duplicate_private_keys": 0,
+  "holdouts": {
+    "north_atlantic": {
+      "bias_per_mille": 0.008474500795184473,
+      "blocks": 50,
+      "expocode": "33MW19930704",
+      "mae_per_mille": 0.05033809159512594,
+      "n": 430,
+      "r2": 0.9561499574365153,
+      "rmse_per_mille": 0.07593504913537397
+    },
+    "south_atlantic": {
+      "bias_per_mille": -0.0222281064121658,
+      "blocks": 22,
+      "expocode": "33RO20050111",
+      "mae_per_mille": 0.062162124772389964,
+      "n": 451,
+      "r2": 0.9389820710530328,
+      "rmse_per_mille": 0.08815818350283905
+    }
+  },
+  "label": "whole-cruise-disjoint within the same 51-cruise observation family",
+  "matching_key": [
+    "G2cruise",
+    "station",
+    "cast",
+    "bottle",
+    "pressure"
+  ],
+  "not_claimed": "observing-system-family independence",
+  "private_reference_rows": 881,
+  "public_author_prediction_rows": 0,
+  "public_holdout_label_rows": 0,
+  "public_qc_rows_from_holdout_cruises": 0,
+  "sample_id_overlap_between_regions": 0,
+  "schema_version": "1.0"
+}

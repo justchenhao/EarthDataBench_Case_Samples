@@ -1,0 +1,17 @@
+station_id,year_month,score_split,elevation_group,score_season
+SETP10,2019-01,primary,upper,cold
+SETP10,2019-07,primary,upper,warm
+SETP11,2019-01,primary,upper,cold
+SETP11,2019-07,primary,upper,warm
+SETP12,2019-01,transfer,lower,cold
+SETP12,2019-07,transfer,lower,warm
+SETP13,2019-01,transfer,lower,cold
+SETP13,2019-07,transfer,lower,warm
+SETP14,2019-01,transfer,upper,cold
+SETP14,2019-07,transfer,upper,warm
+SETP7,2019-01,primary,upper,cold
+SETP7,2019-07,primary,upper,warm
+SETP8,2019-01,primary,upper,cold
+SETP8,2019-07,primary,upper,warm
+SETP9,2019-01,primary,upper,cold
+SETP9,2019-07,primary,upper,warm

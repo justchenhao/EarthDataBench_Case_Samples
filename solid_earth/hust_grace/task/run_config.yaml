@@ -1,0 +1,9 @@
+schema_version: "1.0"
+variants: [base, open]
+public_inputs: input/
+agent_prompt: task/task_prompt_{variant}.md
+output_directory: output/
+private_evaluation:
+  bridge: task/main.py
+  evaluator: reference/evaluator/verify.py
+  reference: reference/

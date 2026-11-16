@@ -1,0 +1,49 @@
+{
+  "baselineVersion": "6.0",
+  "evaluatorVersion": "6.0.0",
+  "frozenDate": "2026-09-02",
+  "taskId": "atmosphere/antarctic_monthly_t2m_reconstruction",
+  "authorProductSha256": "d3d5c16e603005dfbf535d844aeb997b0256f6132397de14ef62b81ffcc46973",
+  "evaluatorConfigSha256": "d8d7d410827b2f17e668a16eac59f65664b9edf7a050b7a0e766eaf6f2660f43",
+  "evaluatorEntrySha256": "e9b9ac7ada050e34dd8deb6f4c0eebe120f1142fb829732eb1fed913435462ef",
+  "evaluatorCoreSha256": "e745d223fd5ba2ec81f7c65ab87b8efb65d72f1aed27cbff3e45123d6fc4174a",
+  "scoringDesignSha256": "93b0b664220ee0adfd113267bd46ff2fd11aaeb7627a3f66bc04ab27d25a1cc5",
+  "authorReplayStatus": "pass",
+  "authorCalibration": {
+    "status": "scored",
+    "stage": "S3",
+    "score": 0.6,
+    "scoreLevel": "human_expert_level",
+    "productConsistencyTier": 0.6,
+    "independentValidationCap": 0.6,
+    "lowBranchScore": 0.6
+  },
+  "expertField": {
+    "fieldRmseK": 0.0,
+    "fieldMaeK": 0.0,
+    "fieldCorrelation": 1.0,
+    "domainMeanRmseK": 0.0,
+    "domainMeanCorrelation": 1.0,
+    "trendRmseKPerDecade": 0.0,
+    "seasonalStdRmseK": 0.0,
+    "baselineMeanAbsoluteK": 0.0008589678512701805,
+    "baselineClosureExcessK": 0.0
+  },
+  "independentValidationUsable33": {
+    "meanBiasObsMinusProductK": 0.06773416296560668,
+    "meanRmseK": 1.704330196797455,
+    "meanDetrendedPearsonR": 0.7702775189785558,
+    "meanFractionalVarianceR2": 0.5270364228585014,
+    "absoluteBiasBelow1KCount": 31,
+    "correlationAtLeast0p7Count": 25,
+    "trendStationCount": 10,
+    "meanTrendAbsoluteErrorKPerDecade": 0.11886515142995231,
+    "maximumStationMatchingDistanceKm": 38.94560046362622
+  },
+  "paperPublishedIndependent34": {
+    "meanBiasK": -0.001,
+    "meanRmseK": 1.060,
+    "meanPearsonR": 0.75,
+    "meanFractionalVarianceR2": 0.52
+  }
+}

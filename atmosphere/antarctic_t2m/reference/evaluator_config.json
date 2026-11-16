@@ -1,0 +1,135 @@
+{
+  "configVersion": "3.0",
+  "evaluatorVersion": "6.0.0",
+  "task_id": "atmosphere/antarctic_monthly_t2m_reconstruction",
+  "taskId": "atmosphere/antarctic_monthly_t2m_reconstruction",
+  "formalProduct": "output/antarctic_t2m_anomaly.nc",
+  "targetVariable": "t2m_anomaly",
+  "template": "input/grid/grid_template.nc",
+  "authorProduct": "expert_product/recon_t2m_1958-2025_ano.final.nc",
+  "authorVariable": "RECON",
+  "independentDataRoot": "reference/stations",
+  "expectedTime": {
+    "start": "1958-01-01",
+    "end": "2022-12-01",
+    "count": 780,
+    "units": "days since 1951-01-01 00:00:00",
+    "calendar": "standard"
+  },
+  "independentValidationProtocol": {
+    "landmaskMinimum": 0.1,
+    "maxMatchingDistanceKm": 85.0,
+    "minimumPairedMonths": 24,
+    "minimumUsableStations": 10,
+    "minimumMonthsPerAnnualMean": 9,
+    "minimumTrendYears": 10
+  },
+  "physicalLimits": {
+    "absoluteAnomalyHardMaxK": 50.0,
+    "minimumTargetStandardDeviationK": 0.05
+  },
+  "validationFidelity": "approximate",
+  "maxScore": 1.0,
+  "independentValidationMetrics": [
+    {
+      "name": "meanStationRmseK",
+      "role": "primary",
+      "direction": "lower_is_better",
+      "scoreEffect": ["S_B_0.4", "S_B_0.6", "S4", "S5"],
+      "thresholds": {"S_B_0.4": "ratio<=1.70", "S_B_0.6": "ratio<=1.10"},
+      "calibrationEvidence": "The expert ratio is 1.0; frozen 1 K noise is 1.140 and remains medium, while strict 0.6 retains the approved 1.10 tolerance."
+    },
+    {
+      "name": "meanDetrendedStationCorrelation",
+      "role": "guard",
+      "direction": "higher_is_better",
+      "scoreEffect": ["S_B_0.4", "S_B_0.6", "S4", "S5"],
+      "thresholds": {"S_B_0.4": "drop<=0.20", "S_B_0.6": "drop<=0.05"},
+      "calibrationEvidence": "The 0.6 drop tolerance 0.05 is preserved; frozen 1 K and 2 K noise have drops 0.114 and 0.261, separating the 0.4 and 0.2 outcomes at 0.20."
+    },
+    {
+      "name": "meanStationTrendAbsoluteErrorKPerDecade",
+      "role": "secondary_scored",
+      "direction": "lower_is_better",
+      "scoreEffect": ["S_B_0.4", "S_B_0.6", "S4", "S5"],
+      "thresholds": {"S_B_0.4": "excess<=0.20", "S_B_0.6": "excess<=0.05"},
+      "calibrationEvidence": "Ten long-record stations support trend scoring; the approved 0.6 excess tolerance 0.05 is preserved and the former S2 tolerance 0.20 defines the relaxed medium cap."
+    },
+    {
+      "name": "regionalRmseCorrelationStability",
+      "role": "guard",
+      "direction": "higher_is_better",
+      "scoreEffect": ["S_B_0.4", "S_B_0.6", "S4", "S5"],
+      "thresholds": {"S_B_0.4": ">=27/33 within 0.75 K and 0.20 deficits", "S_B_0.6": ">=30/33 within 0.35 K and 0.10 deficits"},
+      "calibrationEvidence": "All 33 regions pass for frozen 0.5 K noise; 29 pass the medium guard for 1 K noise, but only 7 pass for the clearly worse 2 K fixture."
+    },
+    {
+      "name": "independentStationSupport",
+      "role": "guard",
+      "direction": "higher_is_better",
+      "scoreEffect": ["S_B_0.4", "S_B_0.6", "S4", "S5"],
+      "thresholds": {"S_B_0.4": "stations>=30 and trend stations>=8", "S_B_0.6": "stations>=30 and trend stations>=8"},
+      "calibrationEvidence": "The frozen expert replay has 33 usable monthly stations and 10 trend stations; caps require nearly complete support rather than the structural preflight minimum."
+    }
+  ],
+  "discreteScoring": {
+    "allowedScores": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+    "cumulative": true,
+    "expertReferenceAnchor": 0.6,
+    "lowBranch": {
+      "rule": "min(product_consistency_tier, independent_validation_cap)",
+      "productConsistencyTiers": {
+        "0.2": {"fieldRmseMax": 3.50, "fieldCorrelationMin": 0.350, "domainMeanRmseMax": 2.00, "domainMeanCorrelationMin": 0.300, "trendRmseMax": 0.400, "seasonalStdRmseMax": 2.25, "baselineClosureExcessMax": 1.50},
+        "0.4": {"fieldRmseMax": 2.00, "fieldCorrelationMin": 0.700, "domainMeanRmseMax": 1.00, "domainMeanCorrelationMin": 0.700, "trendRmseMax": 0.200, "seasonalStdRmseMax": 1.25, "baselineClosureExcessMax": 0.70},
+        "0.6": {"fieldRmseMax": 1.20, "fieldCorrelationMin": 0.900, "domainMeanRmseMax": 0.60, "domainMeanCorrelationMin": 0.900, "trendRmseMax": 0.100, "seasonalStdRmseMax": 0.75, "baselineClosureExcessMax": 0.35}
+      },
+      "independentValidationCaps": {
+        "0.4": {"stationRmseRatioMax": 1.70, "stationCorrelationDropMax": 0.20, "stationTrendMaeExcessMax": 0.20, "regionRmseDeficitMax": 0.75, "regionCorrelationDeficitMax": 0.20, "minimumRegionsWithinTolerance": 27, "regionRmseDeficitHardMax": 0.75, "regionCorrelationDeficitHardMax": 0.35, "minimumUsableStations": 30, "minimumTrendStations": 8},
+        "0.6": {"stationRmseRatioMax": 1.10, "stationCorrelationDropMax": 0.05, "stationTrendMaeExcessMax": 0.05, "regionRmseDeficitMax": 0.35, "regionCorrelationDeficitMax": 0.10, "minimumRegionsWithinTolerance": 30, "regionRmseDeficitHardMax": 0.35, "regionCorrelationDeficitHardMax": 0.10, "minimumUsableStations": 30, "minimumTrendStations": 8}
+      }
+    },
+    "stages": {
+      "S1": {"score": 0.2, "scoreLevel": "minimum_scientific_validity", "kind": "dual_constraint"},
+      "S2": {"score": 0.4, "scoreLevel": "scientifically_usable", "kind": "dual_constraint"},
+      "S3": {"score": 0.6, "scoreLevel": "human_expert_level", "kind": "dual_constraint"},
+      "S4": {"score": 0.8, "scoreLevel": "independent_validation_superior", "kind": "independent_improvement", "thresholds": {"stationRmseRatioMax": 0.98, "stationCorrelationGainMin": 0.01, "stationTrendMaeRatioMax": 1.05, "stationRmseImprovedFractionMin": 0.55, "stationCorrelationImprovedFractionMin": 0.55, "minimumUsableStations": 30, "minimumTrendStations": 8}},
+      "S5": {"score": 1.0, "scoreLevel": "robustly_superior", "kind": "independent_improvement", "thresholds": {"stationRmseRatioMax": 0.93, "stationCorrelationGainMin": 0.03, "stationTrendMaeRatioMax": 0.90, "stationRmseImprovedFractionMin": 0.65, "stationCorrelationImprovedFractionMin": 0.65, "minimumUsableStations": 30, "minimumTrendStations": 8}}
+    }
+  },
+  "independentStations": [
+    {"file":"Elaine.All.temperature.txt","name":"Elaine","latitude":-83.10,"longitude":174.20,"startYear":1993,"endYear":2022,"paper":{"bias":0.07,"rmse":1.58,"r":0.75,"r2":0.50}},
+    {"file":"Lettau.All.temperature.txt","name":"Lettau","latitude":-82.50,"longitude":-174.40,"startYear":1986,"endYear":2022,"paper":{"bias":0.03,"rmse":1.67,"r":0.78,"r2":0.55},"trend":{"startYear":1986,"endYear":2022,"observation":0.10,"reconstruction":0.15}},
+    {"file":"Bellingshausen.All.temperature.txt","name":"Bellingshausen","latitude":-62.20,"longitude":-58.90,"startYear":1968,"endYear":2022,"paper":{"bias":-0.02,"rmse":0.95,"r":0.85,"r2":0.58},"trend":{"startYear":1968,"endYear":2022,"observation":0.20,"reconstruction":0.29}},
+    {"file":"Fossil_Bluff.All.temperature.txt","name":"Fossil Bluff","latitude":-71.30,"longitude":-68.50,"startYear":2005,"endYear":2022,"paper":{"bias":0.01,"rmse":1.18,"r":0.70,"r2":0.39}},
+    {"file":"Leningradskaja.All.temperature.txt","name":"Leningradskaya","latitude":-69.50,"longitude":159.40,"startYear":1972,"endYear":1991,"paper":{"bias":-0.07,"rmse":0.72,"r":0.68,"r2":0.44}},
+    {"file":"Molodeznaja.All.temperature.txt","name":"Molodezhnaya","latitude":-67.70,"longitude":45.90,"startYear":1963,"endYear":1999,"paper":{"bias":0.09,"rmse":0.66,"r":0.85,"r2":0.72},"trend":{"startYear":1963,"endYear":1999,"observation":-0.02,"reconstruction":0.02}},
+    {"file":"Neumayer.All.temperature.txt","name":"Neumayer","latitude":-70.70,"longitude":-8.40,"startYear":1981,"endYear":2022,"paper":{"bias":-0.05,"rmse":1.51,"r":0.62,"r2":0.35},"trend":{"startYear":1981,"endYear":2022,"observation":-0.11,"reconstruction":0.01}},
+    {"file":"Rothera.All.temperature.txt","name":"Rothera","latitude":-67.50,"longitude":-68.10,"startYear":1976,"endYear":2022,"paper":{"bias":-0.04,"rmse":0.98,"r":0.89,"r2":0.75},"trend":{"startYear":1977,"endYear":2022,"observation":0.49,"reconstruction":0.34}},
+    {"file":"Russkaya.All.temperature.txt","name":"Russkaya","latitude":-74.80,"longitude":-136.90,"startYear":1980,"endYear":1990,"paper":{"bias":0.06,"rmse":0.66,"r":0.84,"r2":0.68}},
+    {"file":"Butler_Island.All.temperature.txt","name":"Butler Island","latitude":-72.20,"longitude":-60.20,"startYear":1980,"endYear":2022,"paper":{"bias":-0.09,"rmse":1.54,"r":0.57,"r2":0.28},"trend":{"startYear":1990,"endYear":2022,"observation":-0.12,"reconstruction":0.18}},
+    {"file":"Cape_Philips.All.temperature.txt","name":"Cape Philips","latitude":-73.10,"longitude":169.60,"startYear":1980,"endYear":2022,"paper":{"bias":0.00,"rmse":0.86,"r":0.69,"r2":0.47}},
+    {"file":"D_47.All.temperature.txt","name":"D-47","latitude":-67.40,"longitude":138.70,"startYear":2009,"endYear":2022,"paper":{"bias":0.02,"rmse":0.87,"r":0.77,"r2":0.58}},
+    {"file":"Dome_A.All.temperature.txt","name":"Dome A","latitude":-80.40,"longitude":77.40,"startYear":2005,"endYear":2022,"paper":{"bias":-0.98,"rmse":2.75,"r":0.44,"r2":0.01}},
+    {"file":"Dome_C_II.All.temperature.txt","name":"Dome C II","latitude":-75.10,"longitude":123.40,"startYear":1996,"endYear":2022,"paper":{"bias":0.02,"rmse":1.18,"r":0.72,"r2":0.44},"trend":{"startYear":1996,"endYear":2022,"observation":0.20,"reconstruction":0.12}},
+    {"file":"Drescher.All.temperature.txt","name":"Drescher","latitude":-72.87,"longitude":-19.03,"startYear":1992,"endYear":2003,"paper":{"bias":0.02,"rmse":0.86,"r":0.52,"r2":0.25}},
+    {"file":"Elizabeth.All.temperature.txt","name":"Elizabeth","latitude":-82.60,"longitude":-137.10,"startYear":1996,"endYear":2012,"paper":{"bias":0.04,"rmse":1.08,"r":0.84,"r2":0.64}},
+    {"file":"GC41.All.temperature.txt","name":"GC41","latitude":-71.60,"longitude":111.30,"startYear":1984,"endYear":2005,"paper":{"bias":0.02,"rmse":1.54,"r":0.67,"r2":0.36}},
+    {"file":"GF08.All.temperature.txt","name":"GF08","latitude":-68.50,"longitude":102.10,"startYear":1986,"endYear":2007,"paper":{"bias":-0.02,"rmse":1.21,"r":0.75,"r2":0.49}},
+    {"file":"Gill.All.temperature.txt","name":"Gill","latitude":-80.00,"longitude":-178.60,"startYear":1985,"endYear":2022,"paper":{"bias":0.05,"rmse":1.66,"r":0.85,"r2":0.60},"trend":{"startYear":1985,"endYear":2022,"observation":0.23,"reconstruction":0.10}},
+    {"file":"Harry.All.temperature.txt","name":"Harry","latitude":-83.00,"longitude":-121.40,"startYear":1994,"endYear":2022,"paper":{"bias":0.06,"rmse":0.76,"r":0.89,"r2":0.79}},
+    {"file":"Larsen_Ice_Shelf.All.temperature.txt","name":"Larsen Ice Shelf","latitude":-66.90,"longitude":-60.90,"startYear":1995,"endYear":2022,"paper":{"bias":-0.12,"rmse":1.44,"r":0.68,"r2":0.44}},
+    {"file":"LGB10.All.temperature.txt","name":"LG10","latitude":-71.30,"longitude":59.20,"startYear":1993,"endYear":2004,"paper":{"bias":0.02,"rmse":0.54,"r":0.80,"r2":0.62}},
+    {"file":"LGB20.All.temperature.txt","name":"LG20","latitude":-73.80,"longitude":55.70,"startYear":1991,"endYear":2004,"paper":{"bias":0.02,"rmse":0.53,"r":0.83,"r2":0.67}},
+    {"file":"LGB35.All.temperature.txt","name":"LG35","latitude":-76.00,"longitude":65.00,"startYear":1994,"endYear":2007,"paper":{"bias":-0.02,"rmse":0.52,"r":0.85,"r2":0.71}},
+    {"file":"LGB59.All.temperature.txt","name":"LG59","latitude":-73.50,"longitude":76.78,"startYear":1994,"endYear":2003,"paper":{"bias":0.00,"rmse":0.44,"r":0.83,"r2":0.68}},
+    {"file":"Law_Dome_Summit.All.temperature.txt","name":"Law Dome Summit","latitude":-66.70,"longitude":112.70,"startYear":1987,"endYear":2010,"excludeYears":[1998,1999,2000,2001,2002],"paper":{"bias":0.04,"rmse":0.73,"r":0.79,"r2":0.62}},
+    {"file":"Limbert.All.temperature.txt","name":"Limbert","latitude":-75.40,"longitude":-59.90,"startYear":1995,"endYear":2022,"paper":{"bias":-0.11,"rmse":1.25,"r":0.76,"r2":0.37}},
+    {"file":"Manuela.All.temperature.txt","name":"Manuela","latitude":-74.90,"longitude":163.70,"startYear":1984,"endYear":2022,"paper":{"bias":0.13,"rmse":0.86,"r":0.75,"r2":0.55},"trend":{"startYear":1985,"endYear":2022,"observation":0.35,"reconstruction":0.15}},
+    {"file":"Marble_Point.All.temperature.txt","name":"Marble Point","latitude":-77.40,"longitude":163.70,"startYear":1980,"endYear":2022,"paper":{"bias":0.06,"rmse":0.62,"r":0.94,"r2":0.89},"trend":{"startYear":1980,"endYear":2022,"observation":0.30,"reconstruction":0.17}},
+    {"file":"Marilyn.All.temperature.txt","name":"Marilyn","latitude":-80.00,"longitude":165.10,"startYear":1987,"endYear":2022,"paper":{"bias":-0.06,"rmse":0.88,"r":0.89,"r2":0.77}},
+    {"file":"Siple.All.temperature.txt","name":"Mount Siple","latitude":-73.20,"longitude":-127.10,"startYear":1992,"endYear":2005,"availableForReplay":false,"exclusionReason":"The current READER Siple file is the different Siple station and has only three values in the paper's Mount Siple period; no substitution is allowed.","paper":{"bias":-0.06,"rmse":0.69,"r":0.74,"r2":0.54}},
+    {"file":"Relay_Station.All.temperature.txt","name":"Relay Station","latitude":-74.00,"longitude":43.10,"startYear":1995,"endYear":2022,"paper":{"bias":0.57,"rmse":1.64,"r":0.71,"r2":0.13}},
+    {"file":"Theresa.All.temperature.txt","name":"Theresa","latitude":-84.60,"longitude":-115.80,"startYear":1994,"endYear":2022,"paper":{"bias":0.09,"rmse":0.83,"r":0.77,"r2":0.57}},
+    {"file":"Troll.All.temperature.txt","name":"Troll","latitude":-72.00,"longitude":2.50,"startYear":2010,"endYear":2019,"paper":{"bias":0.16,"rmse":0.86,"r":0.58,"r2":0.17}}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "grid_expert": {
+    "bytes": 17120245,
+    "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-18-2443-2026/case_factory/v0.5/staging/s2/private_bc/expert_climatology.nc",
+    "sha256": "5ae49b19d7a1eb46744a7a8f6ebe3960c857d036f2cb0afb164f126d682ab8ff"
+  },
+  "paper_uncertainty_per_mille": {
+    "input": 0.009,
+    "mapping": 0.08,
+    "observation": 0.07,
+    "overall": 0.11
+  },
+  "point_expert": {
+    "bytes": 1396387,
+    "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-18-2443-2026/case_factory/v0.5/staging/s2/private_bc/expert_point_product.csv.gz",
+    "rows": 152127,
+    "sha256": "2891d7ba479f278989952c6a19bc94430980708573683d50c1819ffbc504971e"
+  },
+  "public_recipe_vs_author_qc": {
+    "compared_rows": 14088,
+    "interpretation": "unpublished 2023 row-wise micro-adjustment and explicit poor-cruise exclusion",
+    "max_abs_error_per_mille": 0.004997471770851081,
+    "mismatch_cruises": [
+      "33RO20230306",
+      "33RO20230413"
+    ],
+    "mismatch_rows": 3507,
+    "rmse_per_mille": 0.0014432563332861148
+  },
+  "qc_expert": {
+    "bytes": 277964,
+    "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-18-2443-2026/case_factory/v0.5/staging/s2/private_bc/expert_qc_observations.csv.gz",
+    "rows": 96079,
+    "sha256": "184e0d6f44d49c6aee31a3b0c4f195dc43023c40379a4fc891851ae7b4c9fbaf"
+  },
+  "schema_version": "1.0"
+}

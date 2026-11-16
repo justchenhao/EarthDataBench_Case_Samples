@@ -1,0 +1,59 @@
+# 欧洲 LUCAS 2012–2018 作物序列类型点产品构建
+
+## Objective
+
+仅使用提供的 Harmonised LUCAS 公开观测，重建覆盖 2012、2015 和 2018 三次调查的欧洲稀疏点作物序列类型产品。你需要自己设计并论证一个确定性八类分类方法；不要照抄某个未提供的作者流程。
+
+使用八个频率字段构建 8 类语义类型。
+
+最终八个语义标签必须一一对应八个簇：
+
+```text
+cereals
+rapeseed and cereals
+sunflower and cereals
+pulses and cereals
+root crops and cereals
+forage legumes and cereals
+temporary grasslands
+corn and cereals
+```
+
+语义标签不能随意命名。每个标签在簇中心上必须与其同名特征有最大主导性：`cereals` 簇的 `cereals` 中心应高于其他七个特征；七个非纯谷物标签也必须满足同名非谷物特征高于该簇的其他非谷物特征。若采用全局一对一匹配，必须解释并列消歧规则。
+
+Method choices are not prescribed.
+
+## Input
+
+唯一输入是 `input/lucas_harmo_uf.zip`，SHA-256 为 `e7d2823105bd35a8e9d3d67e830f332f60f3eee304f8ff13b680cb7f96326cc1`。ZIP 内含 `lucas_harmo_uf.csv`：UTF-8 逗号分隔表，约 1.60 GB、1,351,293 行、117 列。关键源字段为 `point_id,year,nuts0,nuts2,nuts3,th_lat,th_long,lc1`。
+
+## Prohibited data
+
+不得联网、搜索论文、使用作者代码或产品、外部农业数据、独立验证资料、隐藏 evaluator 或宿主机其他目录。不得读取 `reference/`、`expert_product/`、私有 evaluator、旧运行结果或任何外部数据。
+
+## Output
+
+生成 `output/crop_sequence_product.csv`，UTF-8 编码，按 `point_id` 数值升序，列顺序严格为：
+
+```text
+point_id,nuts0,nuts2,nuts3,latitude,longitude,lc1_2012,lc1_2015,lc1_2018,cereals,corn,rapeseed,sunflower,pulses,root_crops,forage_legumes,temporary_grasslands,crop_sequence_type
+```
+
+- 恰好 21,620 行，`point_id` 唯一；
+- `latitude/longitude` 分别来自 `th_lat/th_long`，不得插值、格网化或不必要地舍入；
+- `lc1_2012/lc1_2015/lc1_2018` 保存公开输入中的原始 `lc1` 代码；
+- 八个频率必须有限且属于允许的三分数集合；
+- `crop_sequence_type` 必须属于上述八个语义标签。
+
+### Other deliverables
+
+所有交付写入 `output/`：
+
+- `output/process_lucas.py`：从唯一 ZIP 输入完整重建产品与图件的代码；
+- `output/report.md`：说明输入检查、支持筛选计数、频率构造、分类方法、语义命名、每类点数、软件版本、质量检查和局限；
+- `output/crop_sequence_map.png`：单幅图绘制全部点，按八个语义类型着色，含清晰英文图例和坐标标签；
+- CSV 必须按 `point_id` 数值升序。
+
+## Evaluation
+
+Evaluation checks deliverable completeness, schema and physical consistency, followed by private expert-reference and independent-observation quality gates. Numerical thresholds and private supports are not disclosed.

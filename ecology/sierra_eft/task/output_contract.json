@@ -1,0 +1,48 @@
+{
+  "annual_shape": [
+    18,
+    164,
+    410
+  ],
+  "case_id": "ecology/sierra_nevada_eft_v09",
+  "exact_deliverable_files": [
+    "sierra_nevada_eft.npz",
+    "thresholds.json",
+    "representative.png",
+    "methodology.md",
+    "build_product.py"
+  ],
+  "figure": {
+    "axes": "longitude/latitude",
+    "required_panels": [
+      "EFT mode",
+      "mean EVI",
+      "DMAX",
+      "richness",
+      "rarity",
+      "dissimilarity"
+    ]
+  },
+  "fixed_report_wording_required": false,
+  "npz_fields": [
+    "eft_code",
+    "eft_interannual_dissimilarity",
+    "eft_interannual_variability",
+    "eft_mode",
+    "eft_rarity",
+    "eft_rarity_interannual_mean",
+    "eft_richness",
+    "eft_richness_interannual_mean",
+    "evi_dmax_interannual_mean",
+    "evi_dmax_month",
+    "evi_mean_interannual_mean",
+    "evi_mean_scaled",
+    "evi_ssd_interannual_mean",
+    "evi_ssd_scaled"
+  ],
+  "period_shape": [
+    164,
+    410
+  ],
+  "schema_version": "1.0"
+}

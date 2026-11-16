@@ -1,0 +1,369 @@
+{
+  "agent_figures": {
+    "base": {
+      "bytes": 899689,
+      "mode": "RGBA",
+      "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/base/codex/2026-08-26T15-45-35/output/representative.png",
+      "pixels": [
+        1800,
+        1100
+      ],
+      "sha256": "dd066fc387fc2644f0b3bb0ea6a1f1c2b42b7b7d9acc433ab7587f73199f2da9"
+    },
+    "open": {
+      "bytes": 982128,
+      "mode": "RGBA",
+      "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/runs/formal/ecology/sierra_nevada_eft_v09/open/codex/2026-08-26T15-45-35/output/representative.png",
+      "pixels": [
+        2700,
+        1650
+      ],
+      "sha256": "8d4da1222ff5ffdded6a3948df228a7b5aa3d244c94e8f21b8414a88de34a729"
+    }
+  },
+  "agent_numeric_statistics": {
+    "base": {
+      "eft_code": {
+        "dtype": "uint8",
+        "maximum": 64.0,
+        "minimum": 1.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 16.976118281111383,
+        "unique_count": 64
+      },
+      "eft_interannual_dissimilarity": {
+        "dtype": "float32",
+        "maximum": 0.9250122904777527,
+        "minimum": 0.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 0.14541974498471222,
+        "unique_count": 64406
+      },
+      "eft_interannual_variability": {
+        "dtype": "uint8",
+        "maximum": 17.0,
+        "minimum": 1.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 2.5071199291160036,
+        "unique_count": 17
+      },
+      "eft_mode": {
+        "dtype": "uint8",
+        "maximum": 64.0,
+        "minimum": 1.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 16.754977820148213,
+        "unique_count": 64
+      },
+      "eft_rarity": {
+        "dtype": "float32",
+        "maximum": 0.9982068538665771,
+        "minimum": 0.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 0.28825971239354,
+        "unique_count": 1112
+      },
+      "eft_rarity_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 0.9484379887580872,
+        "minimum": 0.1821143925189972,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 0.1500178949565772,
+        "unique_count": 66410
+      },
+      "eft_richness": {
+        "dtype": "uint8",
+        "maximum": 16.0,
+        "minimum": 0.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 2.694273038157447,
+        "unique_count": 17
+      },
+      "eft_richness_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 12.88888931274414,
+        "minimum": 0.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 2.203468559322154,
+        "unique_count": 209
+      },
+      "evi_dmax_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 12.0,
+        "minimum": 1.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 2.0748877298921693,
+        "unique_count": 12
+      },
+      "evi_dmax_month": {
+        "dtype": "uint8",
+        "maximum": 12.0,
+        "minimum": 1.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 2.7765576334300373,
+        "unique_count": 12
+      },
+      "evi_mean_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 4253.27783203125,
+        "minimum": 128.3333282470703,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 651.1039209616159,
+        "unique_count": 34873
+      },
+      "evi_mean_scaled": {
+        "dtype": "int16",
+        "maximum": 5212.0,
+        "minimum": 46.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 672.7623478861341,
+        "unique_count": 4334
+      },
+      "evi_ssd_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 1877.0555419921875,
+        "minimum": 65.11111450195312,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 183.56886032712293,
+        "unique_count": 13356
+      },
+      "evi_ssd_scaled": {
+        "dtype": "int16",
+        "maximum": 2525.0,
+        "minimum": 17.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 210.96968166190902,
+        "unique_count": 1936
+      }
+    },
+    "open": {
+      "eft_code": {
+        "dtype": "uint8",
+        "maximum": 64.0,
+        "minimum": 1.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 16.812229136178736,
+        "unique_count": 64
+      },
+      "eft_interannual_dissimilarity": {
+        "dtype": "float32",
+        "maximum": 0.9187546968460083,
+        "minimum": 0.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 0.13987273094392255,
+        "unique_count": 64460
+      },
+      "eft_interannual_variability": {
+        "dtype": "uint8",
+        "maximum": 16.0,
+        "minimum": 1.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 2.349073700132174,
+        "unique_count": 16
+      },
+      "eft_mode": {
+        "dtype": "uint8",
+        "maximum": 64.0,
+        "minimum": 1.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 16.445215820758275,
+        "unique_count": 64
+      },
+      "eft_rarity": {
+        "dtype": "float32",
+        "maximum": 0.9982283115386963,
+        "minimum": 0.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 0.28080511388066975,
+        "unique_count": 1119
+      },
+      "eft_rarity_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 0.935937762260437,
+        "minimum": 0.14308124780654907,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 0.1548205381164112,
+        "unique_count": 66741
+      },
+      "eft_richness": {
+        "dtype": "uint8",
+        "maximum": 16.0,
+        "minimum": 0.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 2.7566573998721724,
+        "unique_count": 17
+      },
+      "eft_richness_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 12.94444465637207,
+        "minimum": 0.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 2.245176284758249,
+        "unique_count": 205
+      },
+      "evi_dmax_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 12.0,
+        "minimum": 1.0,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 2.0756296008851267,
+        "unique_count": 12
+      },
+      "evi_dmax_month": {
+        "dtype": "uint8",
+        "maximum": 12.0,
+        "minimum": 1.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 2.7765576334300373,
+        "unique_count": 12
+      },
+      "evi_mean_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 4253.27783203125,
+        "minimum": 128.3333282470703,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 651.1039209616159,
+        "unique_count": 34873
+      },
+      "evi_mean_scaled": {
+        "dtype": "int16",
+        "maximum": 5212.0,
+        "minimum": 46.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 672.7623478861341,
+        "unique_count": 4334
+      },
+      "evi_ssd_interannual_mean": {
+        "dtype": "float32",
+        "maximum": 1877.0555419921875,
+        "minimum": 65.11111450195312,
+        "shape": [
+          164,
+          410
+        ],
+        "std": 183.56886032712293,
+        "unique_count": 13356
+      },
+      "evi_ssd_scaled": {
+        "dtype": "int16",
+        "maximum": 2525.0,
+        "minimum": 17.0,
+        "shape": [
+          18,
+          164,
+          410
+        ],
+        "std": 210.96968166190902,
+        "unique_count": 1936
+      }
+    }
+  },
+  "axes": "longitude/latitude",
+  "candidate_or_score_changed": false,
+  "case_id": "ecology/sierra_nevada_eft_v09",
+  "formal_t2_rerun": false,
+  "gt_figure": {
+    "bytes": 1392310,
+    "mode": "RGBA",
+    "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-15-1871-2023/case_factory/v0.9/staging/s3/gt_reference.png",
+    "pixels": [
+      3150,
+      1800
+    ],
+    "sha256": "08a65daebb8b8cb8e80796f188387911b4124a82845dfc07827f8d421c1c39b6"
+  },
+  "gt_source": "immutable author C plus paper-defined dissimilarity",
+  "passed": true,
+  "review": "pass: Agent and GT products are non-degenerate and the formal figures expose the required spatial panels",
+  "schema_version": "1.0",
+  "time_support": "annual 2001-2018"
+}

@@ -1,0 +1,34 @@
+{
+  "independence_audit": {
+    "bytes": 1041,
+    "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-18-2443-2026/case_factory/v0.5/staging/s2/private_bc/independence_audit.json",
+    "sha256": "f1eff8c5b2ee5760e4cb2b2cd5438041e94d981d6b6a739ed48e6471e591e498"
+  },
+  "metrics": {
+    "north_atlantic": {
+      "bias_per_mille": 0.008474500795184473,
+      "blocks": 50,
+      "expocode": "33MW19930704",
+      "mae_per_mille": 0.05033809159512594,
+      "n": 430,
+      "r2": 0.9561499574365153,
+      "rmse_per_mille": 0.07593504913537397
+    },
+    "south_atlantic": {
+      "bias_per_mille": -0.0222281064121658,
+      "blocks": 22,
+      "expocode": "33RO20050111",
+      "mae_per_mille": 0.062162124772389964,
+      "n": 451,
+      "r2": 0.9389820710530328,
+      "rmse_per_mille": 0.08815818350283905
+    }
+  },
+  "reference": {
+    "bytes": 14825,
+    "path": "/chenhao1data/workspace_n/projects/earth_data_agent_bench/data/1-data_prep/10.5194_essd-18-2443-2026/case_factory/v0.5/staging/s2/private_bc/independent_holdout_reference.csv.gz",
+    "rows": 881,
+    "sha256": "16574aef8a68a7778f374ac0504ea701d21c10ad19fa25cd3a3a8d43d290f3c1"
+  },
+  "schema_version": "1.0"
+}

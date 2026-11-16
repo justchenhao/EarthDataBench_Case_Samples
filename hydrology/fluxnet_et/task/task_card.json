@@ -1,0 +1,26 @@
+{
+  "taskId": "hydrology/fluxnet2015_et_benchmark_v05",
+  "title": "Daily Latent-heat-flux Prolongation at Three FLUXNET Sites",
+  "summary": "Prolong daily 2015-2022 LE at three FLUXNET sites from historical tower labels and aligned ERA5-Land and MODIS predictors using a site-specific bias-corrected random forest.",
+  "variants": {
+    "base": "task/task_prompt_base.md",
+    "open": "task/task_prompt_open.md"
+  },
+  "inputFiles": [
+    "input/daily_predictors_and_training.csv.gz",
+    "input/source_lineage.json"
+  ],
+  "outputContract": "task/output_contract.json",
+  "evaluation": "Evaluation checks formal output validity and proceeds strictly through 0.2, 0.4, 0.6, 0.8, and 1.0, stopping at the first failed gate. The 0.4 and 0.6 gates require both expert-product agreement and independent-validation non-inferiority; the 0.8 and 1.0 gates then add robust independent-observation superiority. Private values, support, resampling, and thresholds are not disclosed.",
+  "max_score": 1.0,
+  "validation_fidelity": "unavailable",
+  "referenceProvenance": "published_product",
+  "referenceNotes": "C is the three-site, 2015-2022 subset of the author Zenodo V1.0 prolonged daily LE product (DOI 10.5281/zenodo.13853409), with only site/date selection and decimal formatting.",
+  "scoreSemantics": {
+    "0.2": "Minimum usability",
+    "0.4": "Scientific consistency",
+    "0.6": "Expert-level quality (C tolerance AND B non-inferiority)",
+    "0.8": "Beyond-expert (0.6 gates AND prespecified B improvement)",
+    "1.0": "Stronger improvement (0.8 gates AND second independent axis or stronger frozen B evidence)"
+  }
+}

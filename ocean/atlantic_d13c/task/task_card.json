@@ -1,0 +1,30 @@
+{
+  "taskId": "ocean/atlantic_d13c_dic_gpr_v03",
+  "title": "Atlantic δ¹³C-DIC observations, point reconstruction, and 3-D climatology",
+  "summary": "Construct a quality-controlled Atlantic cruise table, a 152,127-row GLODAPv2.2023 point reconstruction, and a 1-degree 33-depth climatology from public observations and predictors.",
+  "variants": {
+    "base": "task/task_prompt_base.md",
+    "open": "task/task_prompt_open.md"
+  },
+  "inputFiles": [
+    "input/qc_observation_source.csv.gz",
+    "input/cruise_adjustments.csv",
+    "input/point_prediction_support.csv.gz",
+    "input/grid_prediction_support.nc",
+    "input/xco2_monthly_1972_2023.csv.gz",
+    "input/README.md",
+    "input/input_manifest.json"
+  ],
+  "outputContract": "task/output_contract.json",
+  "evaluation": "Evaluation first checks exact delivery, schema, identifiers, coordinates, mask behavior, physical validity, non-degeneracy, reproducibility, and figure readability. Valid formal products are then compared with a trusted expert product and concealed whole-cruise observations. Evaluation proceeds strictly through 0.2, 0.4, 0.6, 0.8, and 1.0, stopping at the first failed gate. The 0.4 and 0.6 gates require both expert-product agreement and independent-validation non-inferiority; the 0.8 and 1.0 gates then add strict independent improvement. Private support, values, numerical comparison thresholds, and scoring implementation are not disclosed. Public output-gate safety and non-degeneracy limits are stated explicitly in both Prompt variants and output_contract.json.",
+  "max_score": 1.0,
+  "validation_fidelity": "unavailable",
+  "referenceProvenance": "published_product",
+  "scoreSemantics": {
+    "0.2": "Minimum usability",
+    "0.4": "Scientific consistency",
+    "0.6": "Expert-level quality (C tolerance AND B non-inferiority)",
+    "0.8": "Beyond-expert (0.6 gates AND prespecified B improvement)",
+    "1.0": "Stronger improvement (0.8 gates AND second independent axis or stronger frozen B evidence)"
+  }
+}

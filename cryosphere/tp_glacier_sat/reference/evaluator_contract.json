@@ -1,0 +1,99 @@
+{
+  "B": "heldout_truth.csv.gz",
+  "C": [
+    "author_grid_201901.tif",
+    "author_grid_201907.tif"
+  ],
+  "author_baseline": "author_method_reconstruction.csv.gz",
+  "case_id": "cryosphere/tp_glacier_sat_station_correction_v13",
+  "case_version": "v0.13",
+  "schema_version": "1.0",
+  "score_levels": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "score_gates": {
+    "0.6": "C MAE <= 10 degC AND B non-inferiority (RMSE and |MBE| degradation <= 0.5 degC, R2 degradation <= 0.05)",
+    "0.8": "0.6 gates AND every partition (overall, primary, transfer) has candidate RMSE and |MBE| <= 0.50 x author baseline, R2 no worse, AND overall RMSE <= 1.61 degC",
+    "1.0": "0.8 gates AND overall RMSE <= 1.35 degC"
+  },
+  "gate_rationale": {
+    "halving": "Substantial improvement = every partition's RMSE and |MBE| at most 50% of the author baseline (prevents overall gains being driven by a single easy partition; EarthDataBench scoring requirement section 5).",
+    "absolute_precision_0_8": "Overall RMSE <= 1.61 degC = the source paper's glacier-station validation accuracy (Qin et al. 2023, ESSD 15, 331-360, Fig. 4c).",
+    "absolute_precision_1_0": "Overall RMSE <= 1.35 degC = the source paper's TP regular-station validation accuracy (Qin et al. 2023, Fig. 4b).",
+    "approved": "2026-11-10"
+  },
+  "author_baseline_provenance": "AI-assisted bounded author-method stacking reconstruction; not original author predictions",
+  "author_baseline_model_sha256": "13d3ab9a58f6f9379146937f0edb8548f7dc002513291ac6449f2ab6958223d5",
+  "author_baseline_metrics": {
+    "schema_version": "tp-bounded-author-method-baseline-result.v1",
+    "model_sha256": "13d3ab9a58f6f9379146937f0edb8548f7dc002513291ac6449f2ab6958223d5",
+    "public_loso": {
+      "n": 10,
+      "rmse": 0.6619196736644696,
+      "mae": 0.49952101993217723,
+      "mbe": -0.2913451287083164,
+      "abs_mbe": 0.2913451287083164,
+      "r2": 0.994484493677931
+    },
+    "overall": {
+      "n": 16,
+      "rmse": 1.622887204310938,
+      "mae": 1.2540111417809103,
+      "mbe": -0.9403720112111565,
+      "abs_mbe": 0.9403720112111565,
+      "r2": 0.9671950663873006
+    },
+    "old_baseline_overall": {
+      "n": 16,
+      "rmse": 4.222437331504749,
+      "mae": 3.5901946012500003,
+      "mbe": -2.7917144687500004,
+      "abs_mbe": 2.7917144687500004,
+      "r2": 0.7779304992192395
+    },
+    "groups": {
+      "primary": {
+        "reconstructed": {
+          "n": 10,
+          "rmse": 0.787673948557225,
+          "mae": 0.5925234348902784,
+          "mbe": -0.09070082597867282,
+          "abs_mbe": 0.09070082597867282,
+          "r2": 0.9921815717821819
+        },
+        "old_baseline": {
+          "n": 10,
+          "rmse": 2.151072136463924,
+          "mae": 2.017963457,
+          "mbe": -0.7403952450000001,
+          "abs_mbe": 0.7403952450000001,
+          "r2": 0.941690886472646
+        }
+      },
+      "transfer": {
+        "reconstructed": {
+          "n": 6,
+          "rmse": 2.4473081659346136,
+          "mae": 2.3564906532652965,
+          "mbe": -2.3564906532652965,
+          "abs_mbe": 2.3564906532652965,
+          "r2": 0.92218079948513
+        },
+        "old_baseline": {
+          "n": 6,
+          "rmse": 6.311266631100349,
+          "mae": 6.210579841666667,
+          "mbe": -6.210579841666667,
+          "abs_mbe": 6.210579841666667,
+          "r2": 0.48246169115237736
+        }
+      }
+    }
+  },
+  "legacy_author_replay": "author_replay.csv.gz retained for diagnostic comparison only"
+}

@@ -1,0 +1,155 @@
+{
+  "author_c": {
+    "agreement_tiers": {
+      "0.4": {
+        "grid": {
+          "bias_max": 0.18,
+          "correlation_min": 0.65,
+          "mae_max": 0.22,
+          "rmse_max": 0.3
+        },
+        "point": {
+          "bias_max": 0.12,
+          "correlation_min": 0.7,
+          "flag_agreement_min": 0.9,
+          "mae_max": 0.18,
+          "rmse_max": 0.25
+        },
+        "qc": {
+          "bias_max": 0.01,
+          "correlation_min": 0.98,
+          "flag_agreement_min": 0.98,
+          "mae_max": 0.01,
+          "rmse_max": 0.02
+        },
+        "uncertainty": {
+          "median_max": 0.3,
+          "median_min": 0.07,
+          "p95_max": 0.5
+        }
+      },
+      "0.6": {
+        "grid": {
+          "bias_max": 0.01,
+          "correlation_min": 0.995,
+          "mae_max": 0.02,
+          "rmse_max": 0.03
+        },
+        "point": {
+          "bias_max": 0.01,
+          "correlation_min": 0.995,
+          "flag_agreement_min": 0.995,
+          "mae_max": 0.018,
+          "rmse_max": 0.025
+        },
+        "qc": {
+          "bias_max": 0.002,
+          "correlation_min": 0.999,
+          "flag_agreement_min": 0.999,
+          "mae_max": 0.002,
+          "rmse_max": 0.005
+        },
+        "uncertainty": {
+          "median_max": 0.16,
+          "median_min": 0.09,
+          "p95_max": 0.25
+        }
+      }
+    },
+    "author_replay_required_score": 0.6
+  },
+  "case_id": "ocean/atlantic_d13c_dic_gpr_v03",
+  "case_version": "v0.3",
+  "decision_order": [
+    "output_gate",
+    "C_agreement_and_independent_B_cap_through_0.6",
+    "strict_superiority_only_after_0.6_prerequisites"
+  ],
+  "formal_t2_tuning_allowed": false,
+  "high_tier_cumulative_guard": "The minimum of the C tier and B degradation cap must first reach 0.6. Strict North then gives 0.8; strict North plus strict South gives 1.0. No high tier can bypass C or B non-degradation prerequisites.",
+  "independent_b": {
+    "bootstrap": {
+      "generator": "numpy Generator(PCG64)",
+      "method": "inverted_cdf",
+      "quantile": 0.05,
+      "replicates": 5000,
+      "seeds": {
+        "north_atlantic": 20260826,
+        "south_atlantic": 20260827
+      }
+    },
+    "degradation_caps": {
+      "0.4": {
+        "absolute_bias_max": 0.12,
+        "mae_ratio_max": 1.65,
+        "rmse_ratio_max": 1.65
+      },
+      "0.6": {
+        "absolute_bias_max": 0.035,
+        "mae_ratio_max": 1.05,
+        "rmse_ratio_max": 1.05
+      }
+    },
+    "lineage": "whole-cruise-disjoint within one 51-cruise observing family; not observing-system-family independent",
+    "north": {
+      "blocks": 50,
+      "claim": "strict block-robust North Atlantic improvement over author",
+      "rows": 430
+    },
+    "south": {
+      "blocks": 22,
+      "claim": "cumulative disjoint South Atlantic strict improvement",
+      "rows": 451
+    },
+    "strict_0_8_north": {
+      "absolute_bias_max": 0.03,
+      "absolute_gain_min": 0.002,
+      "bootstrap_gain_lcb_min_exclusive": 0.0,
+      "improved_block_fraction_min": 0.55,
+      "relative_gain_min": 0.02
+    },
+    "strict_1_0_south": {
+      "absolute_bias_max": 0.03,
+      "absolute_gain_min": 0.002,
+      "bootstrap_gain_lcb_min_exclusive": 0.0,
+      "improved_block_fraction_min": 0.55,
+      "relative_gain_min": 0.02
+    },
+    "threshold_basis": "paper RMSE/R2 and frozen author-versus-whole-cruise B; no formal T2 result"
+  },
+  "output": {
+    "deliverables": [
+      "qc_observations.csv.gz",
+      "reconstructed_points.csv.gz",
+      "climatology.nc",
+      "representative.png",
+      "methodology.md",
+      "build_product.py"
+    ],
+    "invalid_or_degenerate_score": 0.0,
+    "methodology_literal_wording_required": false
+  },
+  "schema_version": "1.0",
+  "score_ladder": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "support": {
+    "grid_expert_comparison_cells": 280744,
+    "grid_shape": [
+      33,
+      180,
+      360
+    ],
+    "grid_valid_cells": 289219,
+    "point_id_sha256": "812783dac69291e8e270c01a10d2cfaaad34abb06a131bd4a1c684693e258aae",
+    "point_rows": 152127,
+    "qc_expocode_sha256": "955b4ffeb8e834fe906e108e20d3db22a2919f33eae6b171af558815169a0d81",
+    "qc_id_sha256": "23629dcb3adaff2d05d21beb5346d78086b8d5049a5fcbf98753b8fd764eecfe",
+    "qc_rows": 96079
+  }
+}

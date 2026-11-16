@@ -1,0 +1,44 @@
+{
+  "schema_version": "hust-grace2024-v24-evaluator-contract-v1",
+  "case_id": "solid_earth/hust_grace2024_paper_evaluation_v24",
+  "case_version": "v0.24",
+  "evaluator_sha256": "6d63fb72f0d54020b4127e2e80c6c759b9c7236c2e59ef819a47ee6ebf6c6472",
+  "gates": {
+    "0.0": "invalid output or file set",
+    "0.2": "five-file structure and nonempty products",
+    "0.4": "coarse author C low-degree and spectrum agreement",
+    "0.6": "strict author C replay AND TN-14 C20/C30 noninferiority",
+    "0.8": "strict independent TN-14 B improvement",
+    "1.0": "strict cumulative B improvement threshold"
+  },
+  "author_replay": "natural 0.6; no filename/hash special case",
+  "independent_b": "always reported after public parse gates, including author-gate failure; never mounted to Agent",
+  "determinism": "same candidate/reference bytes produce byte-stable JSON result",
+  "b_noninferiority": {
+    "gate": "0.6",
+    "metric": "for both C20 and C30, candidate_rmse <= 1.05 * expert_rmse and matched_rows >= 20",
+    "tolerance": 0.05,
+    "support": "existing month intersection between the 214-month product window and each NASA TN-14 series; C20=182 months, C30=100 months",
+    "axes": {
+      "c20": {
+        "expert_baseline_rmse": 43.131045363251445,
+        "candidate_rmse_upper_bound": 45.28759763141402
+      },
+      "c30": {
+        "expert_baseline_rmse": 0.4218315157128363,
+        "candidate_rmse_upper_bound": 0.4429230914984781
+      }
+    },
+    "rationale": "Approved 2026-11-09 proposal: benchmark 5% noninferiority convention; ESSD Section 3.1.1 supports TN-14 C20/C30 validation but does not state this tolerance",
+    "boundary_reason": "BOUNDARY_C_PASSED_BUT_B_NONINFERIORITY_FAILED"
+  },
+  "b_block_bootstrap": {
+    "gate": "0.8",
+    "statistic": "mean monthly squared-error improvement",
+    "block_months": 12,
+    "replicates": 5000,
+    "seed": 20261114,
+    "lower_confidence_bound": 0.025,
+    "requirement": "lower_95_percent > 0 for both C20 and C30"
+  }
+}

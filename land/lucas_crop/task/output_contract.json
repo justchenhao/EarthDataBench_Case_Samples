@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "case_id": "land/crop_sequence_eu_lucas_2012_2018",
+  "case_version": "v0.1",
+  "deliverables": [
+    "crop_sequence_product.csv",
+    "process_lucas.py",
+    "report.md",
+    "crop_sequence_map.png"
+  ],
+  "product": {
+    "filename": "crop_sequence_product.csv",
+    "format": "CSV",
+    "row_count": 21620,
+    "columns": [
+      "point_id",
+      "nuts0",
+      "nuts2",
+      "nuts3",
+      "latitude",
+      "longitude",
+      "lc1_2012",
+      "lc1_2015",
+      "lc1_2018",
+      "cereals",
+      "corn",
+      "rapeseed",
+      "sunflower",
+      "pulses",
+      "root_crops",
+      "forage_legumes",
+      "temporary_grasslands",
+      "crop_sequence_type"
+    ],
+    "sort": "point_id ascending",
+    "encoding": "UTF-8"
+  },
+  "code": {
+    "filename": "process_lucas.py",
+    "minimum_bytes": 100,
+    "requirement": "rebuild the product and figure from the public LUCAS ZIP input"
+  },
+  "report": {
+    "filename": "report.md",
+    "minimum_bytes": 300,
+    "required_topics": [
+      "input integrity",
+      "support filtering counts",
+      "frequency construction",
+      "classification and naming",
+      "class counts",
+      "software versions",
+      "quality checks",
+      "limitations"
+    ]
+  },
+  "figure": {
+    "filename": "crop_sequence_map.png",
+    "format": "PNG",
+    "purpose": "human visual QA only",
+    "score_use": "ordinary-file existence and readability only"
+  }
+}

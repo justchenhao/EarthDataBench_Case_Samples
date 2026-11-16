@@ -1,0 +1,14 @@
+{
+  "core_sha256": "9f75b279275e859140207aca945e7a9136f1fe7416ea4ad6cc8e6a7a5eb35f51",
+  "io_guard_sha256": "49bfea69667ad6cb9c8d9f9f17a1cd5c764d721fab59d6adece43d89013faf74",
+  "packages": {
+    "h5py": "3.16.0",
+    "matplotlib": "3.10.9",
+    "netCDF4": "1.7.4",
+    "numpy": "2.4.6",
+    "pandas": "3.0.2"
+  },
+  "python": "3.11.14",
+  "schema_version": "1.0",
+  "verify_sha256": "67f6fb863d3aff74532f62eec6411f6153d3c1f590bb3c2ac92e426044b34494"
+}

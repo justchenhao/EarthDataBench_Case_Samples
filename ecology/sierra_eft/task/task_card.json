@@ -1,0 +1,25 @@
+{
+  "taskId": "ecology/sierra_nevada_eft_v09",
+  "title": "Sierra Nevada Ecosystem Functional Types, 2001–2018",
+  "summary": "Reconstruct annual MOD13Q1-derived EFAs, 64 EFTs, richness, rarity, and interannual stability for the Sierra Nevada fixed source-grid window.",
+  "variants": {
+    "base": "task/task_prompt_base.md",
+    "open": "task/task_prompt_open.md"
+  },
+  "inputFiles": [
+    "input/a_evi_aoi/",
+    "input/a_evi_aoi/aoi_evi_manifest.json"
+  ],
+  "outputContract": "task/output_contract.json",
+  "evaluation": "Evaluation checks exact delivery and schema, non-degeneracy, reproducibility, expert-product similarity, and independent field-phenology performance. Evaluation proceeds strictly through 0.2, 0.4, 0.6, 0.8, and 1.0, stopping at the first failed gate. The 0.4 and 0.6 gates require both expert-product similarity and independent-validation non-inferiority; the 0.8 and 1.0 gates then add strict independent superiority. Private support and thresholds are not disclosed.",
+  "max_score": 1.0,
+  "validation_fidelity": "unavailable",
+  "referenceProvenance": "published_product",
+  "scoreSemantics": {
+    "0.2": "Minimum usability",
+    "0.4": "Scientific consistency",
+    "0.6": "Expert-level quality (C tolerance AND B non-inferiority)",
+    "0.8": "Beyond-expert (0.6 gates AND prespecified B improvement)",
+    "1.0": "Stronger improvement (0.8 gates AND second independent axis or stronger frozen B evidence)"
+  }
+}

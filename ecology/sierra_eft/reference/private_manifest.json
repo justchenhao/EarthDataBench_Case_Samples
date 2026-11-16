@@ -1,0 +1,26 @@
+{
+  "case_id": "ecology/sierra_nevada_eft_v09",
+  "files": [
+    {
+      "bytes": 802,
+      "path": "evaluation_contract.json",
+      "sha256": "8bb66acd229026e644b30208bab4ba007245346d37eb1add3360e9eb4fb0cf8b"
+    },
+    {
+      "bytes": 12370,
+      "path": "evaluator/verify.py",
+      "sha256": "199ca1fc8e40ec41c617a0cfc27da0f84267b32ec05d0e962f3dea89c4680605"
+    },
+    {
+      "bytes": 7407384,
+      "path": "expert_product.npz",
+      "sha256": "aa55f242a46231db7254256c4d4bff6479481b84efcae48ff941e64d8e881c31"
+    },
+    {
+      "bytes": 17139,
+      "path": "fixed_support.json",
+      "sha256": "c8456c61119068b8f2c52ba7cfa56c3d67c680d6299cbb76dd3e43a4f84e2ed6"
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "case_version": "ecology/sierra_nevada_eft_v07_v02",
+  "role": "A",
+  "validation_fidelity": "reconstructed",
+  "checks": {
+    "years": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "annual_products": 18,
+    "granules": 414,
+    "granules_per_year": 23,
+    "duplicate_granules": 0,
+    "missing_years": [],
+    "missing_granules": [],
+    "array_shape_per_year": [
+      23,
+      164,
+      410
+    ],
+    "dtype": "int16",
+    "source_window": {
+      "row_start": 1320,
+      "row_stop": 1484,
+      "col_start": 3402,
+      "col_stop": 3812
+    }
+  },
+  "field_time_region_lineage": {
+    "evi_scaled_int16": {
+      "recoverable_from": "A/C M R manifest + MOD13Q1.061 HDF EVI SDS",
+      "time_support": "23 composites per year, 2001-2018",
+      "region": {
+        "south": 36.91,
+        "west": -3.64,
+        "north": 37.25,
+        "east": -2.59
+      },
+      "processing": [
+        "extract source window",
+        "replace negative EVI with zero"
+      ]
+    },
+    "x_window": {
+      "recoverable_from": "fixed source-window definition",
+      "region": "MODIS sinusoidal column indices 3402:3812"
+    },
+    "y_window": {
+      "recoverable_from": "fixed source-window definition",
+      "region": "MODIS sinusoidal row indices 1320:1484"
+    }
+  },
+  "prohibitions": [
+    "No MOD13Q1.006 granule is mixed into this successor",
+    "No independent B validation claim is made",
+    "C author products are private and are not exposed to the public A role"
+  ]
+}

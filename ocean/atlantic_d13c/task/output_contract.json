@@ -1,0 +1,107 @@
+{
+  "climatology": {
+    "coordinate_dtype": "float64",
+    "dimension_order": [
+      "depth",
+      "lat",
+      "lon"
+    ],
+    "dimensions": {
+      "depth": 33,
+      "lat": 180,
+      "lon": 360
+    },
+    "fill_value": -9999.0,
+    "model": "NETCDF4",
+    "support": "exact input/grid_prediction_support.nc valid_mask",
+    "target_dtype": "float32",
+    "variables": [
+      "d13c_dic",
+      "uncertainty"
+    ]
+  },
+  "deliverables_exactly": [
+    "qc_observations.csv.gz",
+    "reconstructed_points.csv.gz",
+    "climatology.nc",
+    "representative.png",
+    "methodology.md",
+    "build_product.py"
+  ],
+  "output_directory": {
+    "entry_count": 6,
+    "forbidden_examples": [
+      "subdirectories",
+      "__pycache__",
+      "*.pyc",
+      "cached intermediates"
+    ],
+    "ordinary_files_only": true
+  },
+  "output_gate": {
+    "build_product": "syntactically valid Python",
+    "maximum_file_bytes": {
+      "build_product.py": 4194304,
+      "climatology.nc": 100663296,
+      "methodology.md": 2097152,
+      "qc_observations.csv.gz": 16777216,
+      "reconstructed_points.csv.gz": 33554432,
+      "representative.png": 33554432
+    },
+    "maximum_gzip_expanded_bytes": {
+      "qc_observations.csv.gz": 33554432,
+      "reconstructed_points.csv.gz": 67108864
+    },
+    "methodology": "nonempty valid UTF-8",
+    "nondegeneracy": {
+      "grid_unique_min": 1000,
+      "point_unique_min": 1000,
+      "qc_nonfill_min": 8000,
+      "qc_unique_min": 500,
+      "value_standard_deviation_min": 0.05
+    }
+  },
+  "qc_observations": {
+    "columns": [
+      "observation_id",
+      "expocode",
+      "adjusted_d13c_dic_per_mille",
+      "quality_flag"
+    ],
+    "fill_value": -9999.0,
+    "flags": [
+      2,
+      3,
+      9
+    ],
+    "rows": 96079,
+    "support": "exact input/qc_observation_source.csv.gz observation_id set sorted ascending"
+  },
+  "reconstructed_points": {
+    "columns": [
+      "sample_id",
+      "d13c_dic_per_mille",
+      "uncertainty_per_mille",
+      "quality_flag"
+    ],
+    "flags": [
+      2,
+      3
+    ],
+    "rows": 152127,
+    "support": "exact input/point_prediction_support.csv.gz sample_id set sorted ascending",
+    "uncertainty_range": [
+      0.07,
+      1.0
+    ],
+    "value_range": [
+      -2.0,
+      3.0
+    ]
+  },
+  "representative_figure": {
+    "panels": 4,
+    "spatial_colour": "viridis fixed 0-2.2 per mille VPDB"
+  },
+  "schema_version": "1.0"
+}

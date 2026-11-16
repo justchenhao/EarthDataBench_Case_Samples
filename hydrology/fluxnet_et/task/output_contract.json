@@ -1,0 +1,62 @@
+{
+  "case_id": "hydrology/fluxnet2015_et_benchmark_v05",
+  "exact_deliverable_files": [
+    "daily_le_prolonged.csv.gz",
+    "method.json",
+    "representative_daily_le.png",
+    "solution.py"
+  ],
+  "fixed_wording_required": false,
+  "method_additional_keys_allowed": true,
+  "method_required_keys": [
+    "task_id",
+    "validation_fidelity",
+    "public_input_sha256",
+    "predictors",
+    "sites"
+  ],
+  "schema_version": "2.0",
+  "target": {
+    "dates": [
+      "2015-01-01",
+      "2022-12-31"
+    ],
+    "header": [
+      "site_id",
+      "date",
+      "le_w_m2"
+    ],
+    "range_w_m2": [
+      -100.0,
+      350.0
+    ],
+    "rows": 8766,
+    "sites": [
+      "US-MMS",
+      "US-Ne1",
+      "US-NR1"
+    ]
+  },
+  "method_sites_container": "object",
+  "method_site_keys": [
+    "US-MMS",
+    "US-Ne1",
+    "US-NR1"
+  ],
+  "method_site_required_keys": [
+    "training_rows"
+  ],
+  "method_additional_site_keys_allowed": true,
+  "method_top_level_key_policy": "required-subset-plus-additional-clearly-named-diagnostic-fields",
+  "case_version": "v0.6",
+  "method_training_rows_semantics": {
+    "field": "training_rows",
+    "value": "complete public row_role=training count before filtering",
+    "site_values": {
+      "US-MMS": 2970,
+      "US-Ne1": 3504,
+      "US-NR1": 3690
+    },
+    "filtered_counts_must_use_separate_fields": true
+  }
+}

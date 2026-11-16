@@ -1,0 +1,193 @@
+{
+  "block_order": [
+    "LPIS_C01",
+    "LPIS_C02",
+    "LPIS_C03",
+    "LPIS_C04",
+    "LPIS_E01",
+    "LPIS_E02"
+  ],
+  "case_id": "land/crop_sequence_eu_lucas_2012_2018",
+  "case_version": "v0.3",
+  "class_order": [
+    "cereals",
+    "rapeseed and cereals",
+    "sunflower and cereals",
+    "pulses and cereals",
+    "root crops and cereals",
+    "forage legumes and cereals",
+    "temporary grasslands",
+    "corn and cereals"
+  ],
+  "eurostat_baseline_metrics": {
+    "comparison_pairs": 224,
+    "country_r_squared_by_crop": {
+      "cereals": 0.983770849484,
+      "corn": 0.991836280039,
+      "forage_legumes": 0.868434975333,
+      "pulses": 0.970647404578,
+      "rapeseed": 0.985702056226,
+      "root_crops": 0.94775802068,
+      "sunflower": 0.969644105042,
+      "temporary_grasslands": 0.743792824456
+    },
+    "eu_r_squared": 0.990397366584,
+    "global_nrmse": 0.126642887726
+  },
+  "evaluator_version": "crop-sequence-v0.3-contract.1",
+  "exact_string_columns": [
+    "nuts0",
+    "nuts2",
+    "nuts3",
+    "lc1_2012",
+    "lc1_2015",
+    "lc1_2018"
+  ],
+  "feature_order": [
+    "cereals",
+    "corn",
+    "rapeseed",
+    "sunflower",
+    "pulses",
+    "root_crops",
+    "forage_legumes",
+    "temporary_grasslands"
+  ],
+  "implemented_stages": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "label_feature": {
+    "cereals": "cereals",
+    "corn and cereals": "corn",
+    "forage legumes and cereals": "forage_legumes",
+    "pulses and cereals": "pulses",
+    "rapeseed and cereals": "rapeseed",
+    "root crops and cereals": "root_crops",
+    "sunflower and cereals": "sunflower",
+    "temporary grasslands": "temporary_grasslands"
+  },
+  "maximum_implemented_score": 1,
+  "numeric_columns": [
+    "latitude",
+    "longitude",
+    "cereals",
+    "corn",
+    "rapeseed",
+    "sunflower",
+    "pulses",
+    "root_crops",
+    "forage_legumes",
+    "temporary_grasslands"
+  ],
+  "output": {
+    "code": "process_lucas.py",
+    "code_min_bytes": 100,
+    "columns": [
+      "point_id",
+      "nuts0",
+      "nuts2",
+      "nuts3",
+      "latitude",
+      "longitude",
+      "lc1_2012",
+      "lc1_2015",
+      "lc1_2018",
+      "cereals",
+      "corn",
+      "rapeseed",
+      "sunflower",
+      "pulses",
+      "root_crops",
+      "forage_legumes",
+      "temporary_grasslands",
+      "crop_sequence_type"
+    ],
+    "figure": "crop_sequence_map.png",
+    "product": "crop_sequence_product.csv",
+    "report": "report.md",
+    "report_min_bytes": 300,
+    "row_count": 21620
+  },
+  "references": {
+    "eurostat_support": {
+      "path": "independent/eurostat_support.json",
+      "sha256": "354c0d52f67d4e238655df6eb2b4c12b6771f72a3fad44037b806bac24dc7976"
+    },
+    "expert_product": {
+      "path": "expert_reference_product/crop_sequence_product.csv",
+      "sha256": "f1d1927e9651300cc431913c03a127dee30fa4519f16ec73e49fcf697e1b7bb6"
+    },
+    "lpis_targets": {
+      "path": "independent/lpis_targets.json",
+      "sha256": "bfc2227e3df5ae6913467b4679c9c885eba3b0b4be6bfb07acfa192daca53928"
+    },
+    "reference_visualization": {
+      "path": "visualization/reference_crop_sequence_map.png",
+      "sha256": "df3355f87df24016f59f4c8bda57746d573e87ef7eeb8f14dc2cb0ac575114d9"
+    }
+  },
+  "s1": {
+    "minimum_class_count": 10,
+    "numeric_tolerances": {
+      "cereals": 5e-13,
+      "corn": 5e-13,
+      "forage_legumes": 5e-13,
+      "latitude": 1e-09,
+      "longitude": 1e-09,
+      "pulses": 5e-13,
+      "rapeseed": 5e-13,
+      "root_crops": 5e-13,
+      "sunflower": 5e-13,
+      "temporary_grasslands": 5e-13
+    }
+  },
+  "s2": {
+    "minimum_accuracy": 0.7,
+    "minimum_class_recall": 0.4,
+    "minimum_macro_f1": 0.65
+  },
+  "s3": {
+    "aggregation": "unweighted mean total-variation distance across all six frozen blocks plus Eurostat consistency",
+    "author_agreement": {
+      "minimum_accuracy": 0.98,
+      "minimum_class_recall": 0.9,
+      "minimum_macro_f1": 0.97
+    },
+    "author_mean_total_variation": 0.2478546518876211,
+    "eurostat_tolerance": 1e-10,
+    "lpis_noninferiority_margin": 1e-12
+  },
+  "s4": {
+    "aggregation": "strict AND; each gain must exceed 25% of its precomputed attainable author-to-target gap",
+    "block_ids": [
+      "LPIS_C01",
+      "LPIS_C02",
+      "LPIS_C03",
+      "LPIS_C04"
+    ],
+    "meaning": "strict material improvement over author C on every frozen core LPIS geography"
+  },
+  "s5": {
+    "aggregation": "S4 AND strict extension-block AND Eurostat guard",
+    "block_ids": [
+      "LPIS_E01",
+      "LPIS_E02"
+    ],
+    "meaning": "cumulative strict improvement on two held-out LPIS geographies plus Eurostat consistency"
+  },
+  "schema_version": "1.0",
+  "scoring": {
+    "S0": 0,
+    "S1": 0.2,
+    "S2": 0.4,
+    "S3": 0.6,
+    "S4": 0.8,
+    "S5": 1
+  },
+  "validation_fidelity": "reconstructed"
+}

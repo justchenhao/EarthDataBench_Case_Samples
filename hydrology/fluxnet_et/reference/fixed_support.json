@@ -1,0 +1,99 @@
+{
+  "author": {
+    "count": 8766,
+    "sha256": "7b0eddacf4599779fd2582fba842bd7404775d2ce9327b10f53a0df7cc1ac40f"
+  },
+  "blocks": [
+    {
+      "count": 707,
+      "season": "DJF",
+      "seed": 7300,
+      "sha256": "928a908d5e2e7933ae2720bd6b4c04141b33e14528026b5d88aa9c9961f179e0",
+      "site_id": "US-MMS"
+    },
+    {
+      "count": 719,
+      "season": "MAM",
+      "seed": 7301,
+      "sha256": "153313ef3e476db4cb4450a0bed697626c817446b828ea52d23214b41e236b60",
+      "site_id": "US-MMS"
+    },
+    {
+      "count": 726,
+      "season": "JJA",
+      "seed": 7302,
+      "sha256": "9afacfb58f9888518623f8569946fc4da60cd10a75b3e2ecfa5b86a2f99daac2",
+      "site_id": "US-MMS"
+    },
+    {
+      "count": 722,
+      "season": "SON",
+      "seed": 7303,
+      "sha256": "24d4352cd75dc5a69e5683f518c689795ce560ed9926ed2fb6325c505b37dbb3",
+      "site_id": "US-MMS"
+    },
+    {
+      "count": 710,
+      "season": "DJF",
+      "seed": 7304,
+      "sha256": "edbba5e89544ee46f8d4364b37d71dde0ebc176bce650bb160ebad7aa28723d0",
+      "site_id": "US-Ne1"
+    },
+    {
+      "count": 717,
+      "season": "MAM",
+      "seed": 7305,
+      "sha256": "94ac12ae114e029f217ecda857990565ec76b9c8812af3cda217f98077b87372",
+      "site_id": "US-Ne1"
+    },
+    {
+      "count": 715,
+      "season": "JJA",
+      "seed": 7306,
+      "sha256": "e7c3b0ff066ba4ef014af5ed524e400707eb9eda3be45f16e5c2382a4c88bf9f",
+      "site_id": "US-Ne1"
+    },
+    {
+      "count": 725,
+      "season": "SON",
+      "seed": 7307,
+      "sha256": "ff318fac19c4c5747f5915a9d29798d6af1fa498a05bf8fe43bbc1ea30d7bc6d",
+      "site_id": "US-Ne1"
+    },
+    {
+      "count": 522,
+      "season": "DJF",
+      "seed": 7308,
+      "sha256": "ba8acbdd0e2fc13f15f25826e103e4acf8770781814ff473d3a58c3a2bd3860d",
+      "site_id": "US-NR1"
+    },
+    {
+      "count": 376,
+      "season": "MAM",
+      "seed": 7309,
+      "sha256": "dba1fc299097b09d720a9952f8984966732c351dcb0eeab19ae682790a41be5b",
+      "site_id": "US-NR1"
+    },
+    {
+      "count": 395,
+      "season": "JJA",
+      "seed": 7310,
+      "sha256": "208e300b5e93720a63dd06583ff4778ee18410d115d4f8dc25b56e0e951b8370",
+      "site_id": "US-NR1"
+    },
+    {
+      "count": 429,
+      "season": "SON",
+      "seed": 7311,
+      "sha256": "d5d3d23bbd09a15eb611455e9e2727250efabfe4d3c76c528dac1e90fac649c7",
+      "site_id": "US-NR1"
+    }
+  ],
+  "case_id": "hydrology/fluxnet2015_et_benchmark_v05",
+  "independent": {
+    "count": 7463,
+    "sha256": "25c5e311def002d4492a12a914e5119388be32734b4d01416bd44465108ec3b7"
+  },
+  "normalization": "UTF-8 site_id|YYYY-MM-DD lines in stored row order with trailing newline",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.0",
+  "case_version": "ecology/sierra_nevada_eft_v07_v02",
+  "validation_fidelity": "reconstructed",
+  "collection": {
+    "short_name": "MOD13Q1",
+    "version": "061",
+    "concept_id": "C1748066515-LPCLOUD"
+  },
+  "temporal_support": [
+    "2001-01-01T00:00:00Z",
+    "2018-12-31T23:59:59Z"
+  ],
+  "aoi": {
+    "south": 36.91,
+    "west": -3.64,
+    "north": 37.25,
+    "east": -2.59
+  },
+  "source_grid": {
+    "projection": "GCTP_SNSOID",
+    "sphere_radius_m": 6371007.181,
+    "pixel_size_m": 231.656358263889,
+    "tile": "h17v07"
+  },
+  "source_window": {
+    "row_start": 1320,
+    "row_stop": 1484,
+    "col_start": 3402,
+    "col_stop": 3812
+  },
+  "source_variable": {
+    "sds": "250m 16 days EVI",
+    "scale_factor": 10000.0,
+    "raw_fill_value": -3000,
+    "negative_to_zero": true
+  },
+  "granule_count": 414,
+  "year_count": 18,
+  "annual_products": [
+    {
+      "year": 2001,
+      "npz_path": "evi_aoi/evi_2001.npz",
+      "report_path": "evi_aoi/evi_2001.json",
+      "npz_bytes": 2412183,
+      "npz_sha256": "e63f0bf2dde846b681b971a6970962f1560d5a827661e61326448b496de6776f",
+      "report_bytes": 14186,
+      "report_sha256": "2c10123cdc7f1ae18333aa4281eed30929684d55146e249fe7c687e236106e79",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8732
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2002,
+      "npz_path": "evi_aoi/evi_2002.npz",
+      "report_path": "evi_aoi/evi_2002.json",
+      "npz_bytes": 2438570,
+      "npz_sha256": "e2a9221955b81ccf2474d55259b480480dc83691ed00bc3dc195346b5178e785",
+      "report_bytes": 14181,
+      "report_sha256": "40b31d50c274d8b42f369485a1c77b52e61f4fc485f24174b450a0a7519a2074",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8593
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2003,
+      "npz_path": "evi_aoi/evi_2003.npz",
+      "report_path": "evi_aoi/evi_2003.json",
+      "npz_bytes": 2415386,
+      "npz_sha256": "6de64d0fea258ab0c40deec026ed9e3fb891f5fc375d3cf512c572217879ae35",
+      "report_bytes": 14186,
+      "report_sha256": "174198e2b22978ef1c7b5efb9e44b6d2016fbdd7895857c10781a19d6cf3a101",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9882
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2004,
+      "npz_path": "evi_aoi/evi_2004.npz",
+      "report_path": "evi_aoi/evi_2004.json",
+      "npz_bytes": 2429274,
+      "npz_sha256": "75585f6db86d213c4b5c9caeb2625d5835d918e649cac84ad2a0d3df36ca8325",
+      "report_bytes": 14185,
+      "report_sha256": "31fd8e7b8fa136f7b0bcb4d568d24edbbe0961a4597626fcf33f724d5b9fd7d4",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9649
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2005,
+      "npz_path": "evi_aoi/evi_2005.npz",
+      "report_path": "evi_aoi/evi_2005.json",
+      "npz_bytes": 2435188,
+      "npz_sha256": "9e01aed0c861896f18b2d7d79fdf6cf96f9f4c18faa74df564019da6988869fd",
+      "report_bytes": 14184,
+      "report_sha256": "1dbb03c60f450f95394065362d64748ae58b7e431ef49c382635a5b2144014d3",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8682
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2006,
+      "npz_path": "evi_aoi/evi_2006.npz",
+      "report_path": "evi_aoi/evi_2006.json",
+      "npz_bytes": 2426010,
+      "npz_sha256": "9170465c33e941dc582d2bfbe7f2a9e1e64af93ffca680f8a5edf1a74b4e626c",
+      "report_bytes": 14182,
+      "report_sha256": "791051e157f7051e6f974db3cba25eb5041b71809ce9936c9ebdd9f43b3f5d06",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9315
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2007,
+      "npz_path": "evi_aoi/evi_2007.npz",
+      "report_path": "evi_aoi/evi_2007.json",
+      "npz_bytes": 2445692,
+      "npz_sha256": "5a8841cedb30f474133eb637eb1ad701d1e518bc4e6fed0d4de7b879d21f17dd",
+      "report_bytes": 14178,
+      "report_sha256": "1e73050023f92efdf76454473806ec7ccebf8d8472d8bc194200f363f260ed88",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8795
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2008,
+      "npz_path": "evi_aoi/evi_2008.npz",
+      "report_path": "evi_aoi/evi_2008.json",
+      "npz_bytes": 2417468,
+      "npz_sha256": "f7be2d749bb8629fd285266f4a017a62ee06dc6dbd686ae5a2c7d291736873f5",
+      "report_bytes": 14184,
+      "report_sha256": "43731567270f599c6115186520d69da5afd3ebe9e451b6eaeb0a0a707803ccb9",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8489
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2009,
+      "npz_path": "evi_aoi/evi_2009.npz",
+      "report_path": "evi_aoi/evi_2009.json",
+      "npz_bytes": 2403071,
+      "npz_sha256": "26509edd1549033b640a7c9a4b0ee9f9341806660ac990fd8b4cad5e2f29f89e",
+      "report_bytes": 14186,
+      "report_sha256": "dcd94a965cc19d0410bff4f2b8cb510b7f906f2d29a37cb2cee4665540ddd688",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9390
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2010,
+      "npz_path": "evi_aoi/evi_2010.npz",
+      "report_path": "evi_aoi/evi_2010.json",
+      "npz_bytes": 2380787,
+      "npz_sha256": "16c6acfc3eec6bdc1086bb87e8d238874ecf66d2f799c475711848c8f3983692",
+      "report_bytes": 14187,
+      "report_sha256": "759ea1b2f2b70bfcc0bd4f83c91ec5c7734280b646c9531248232406461ead0f",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9212
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2011,
+      "npz_path": "evi_aoi/evi_2011.npz",
+      "report_path": "evi_aoi/evi_2011.json",
+      "npz_bytes": 2430840,
+      "npz_sha256": "ee5b86b41d4fe445f307e33cbf6173ea9b041ffd325f71f7a2f1afbb86dd73a3",
+      "report_bytes": 14189,
+      "report_sha256": "3af9ba6cb1526b27013df3d03315c3de0e911db20128b41ee779fc1a2729f145",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9142
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2012,
+      "npz_path": "evi_aoi/evi_2012.npz",
+      "report_path": "evi_aoi/evi_2012.json",
+      "npz_bytes": 2446606,
+      "npz_sha256": "22b0d591b8fd2e2e4714633c51a662e9e995f76c90e3c886338a97188291cf3e",
+      "report_bytes": 14181,
+      "report_sha256": "cbc3536a1f20a7d8855c6f546ee5e0ace932346765c7f3465d4d1bd9b8a767b6",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9281
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2013,
+      "npz_path": "evi_aoi/evi_2013.npz",
+      "report_path": "evi_aoi/evi_2013.json",
+      "npz_bytes": 2449056,
+      "npz_sha256": "898f3fe90f8097c9c753b3c052e02e31e4688ea742db71d50f953cfc29a05c14",
+      "report_bytes": 14183,
+      "report_sha256": "806fac861b619a7d788ac956c58f31930b542e328a00533c0c9b819415598d4e",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9617
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2014,
+      "npz_path": "evi_aoi/evi_2014.npz",
+      "report_path": "evi_aoi/evi_2014.json",
+      "npz_bytes": 2463029,
+      "npz_sha256": "13c0372e54551c7d82173f645cb1b9a436449bc7373f4a18c8e783c23f16825a",
+      "report_bytes": 14186,
+      "report_sha256": "cb6f9234645ca8634913b07c874378c7e424b4a7b6cf52b5f1472f87cad7c522",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8630
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2015,
+      "npz_path": "evi_aoi/evi_2015.npz",
+      "report_path": "evi_aoi/evi_2015.json",
+      "npz_bytes": 2449770,
+      "npz_sha256": "eff5a28ac8c38086a16b01a9c22490fb29c32e184f8090b1272a73d38b981c7d",
+      "report_bytes": 14182,
+      "report_sha256": "f0fc0c193e026eecee193743f48f359cb30bc269b2b5beaddfaeffe38b91961c",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8416
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2016,
+      "npz_path": "evi_aoi/evi_2016.npz",
+      "report_path": "evi_aoi/evi_2016.json",
+      "npz_bytes": 2447647,
+      "npz_sha256": "3842c19cc43d8acb7680f17d59d6c621a44581acf78bb837f5cc95b126feaf1b",
+      "report_bytes": 14182,
+      "report_sha256": "68baf1e61eff8701e3337ef3162870b2f3325147d5495c353f74355488dd6641",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8426
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2017,
+      "npz_path": "evi_aoi/evi_2017.npz",
+      "report_path": "evi_aoi/evi_2017.json",
+      "npz_bytes": 2452964,
+      "npz_sha256": "24ba1d24545ccd756efe02eba82d725ea54a877e2d0d42bce8ec777a071bc88f",
+      "report_bytes": 14183,
+      "report_sha256": "2b2d39566c1b3a1deed881e5f13460db797697def8142e98e18d217f13a2dc58",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        8382
+      ],
+      "granule_count": 23
+    },
+    {
+      "year": 2018,
+      "npz_path": "evi_aoi/evi_2018.npz",
+      "report_path": "evi_aoi/evi_2018.json",
+      "npz_bytes": 2426436,
+      "npz_sha256": "27ae522fe86ec2d55fe0773519ff0a0da2b2b970ba05c1f529ab376c771da982",
+      "report_bytes": 14187,
+      "report_sha256": "718c687a81dad20711c7e436b04dd0b3c6db42865e049872f368af9b37d23652",
+      "shape": [
+        23,
+        164,
+        410
+      ],
+      "dtype": "int16",
+      "value_range": [
+        0,
+        9133
+      ],
+      "granule_count": 23
+    }
+  ],
+  "raw_hdf_total_bytes": 67001656688,
+  "raw_hdf_retention": "temporary_only; raw HDF files are not retained in staging",
+  "recoverability": "Each annual array is recoverable from the public CMR manifest and its 23 MOD13Q1.061 granules; source HDF hashes are retained in annual reports."
+}

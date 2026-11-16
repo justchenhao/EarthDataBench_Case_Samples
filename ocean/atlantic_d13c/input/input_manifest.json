@@ -1,0 +1,48 @@
+{
+  "access_class": "public_production_input_only",
+  "case_id": "ocean/atlantic_d13c_dic_gpr_v03",
+  "case_version": "v0.3",
+  "files": [
+    {
+      "bytes": 2198230,
+      "path": "input/qc_observation_source.csv.gz",
+      "sha256": "c15016ec6ab13d1c33a4b68f0a38daf9820954e3ed4e30d7c0885e9f66013e84"
+    },
+    {
+      "bytes": 914,
+      "path": "input/cruise_adjustments.csv",
+      "sha256": "99dde69d44200c2faad518b4bcc4fc4651f8aedfa8fc83b9efc4490c946ab56c"
+    },
+    {
+      "bytes": 3542116,
+      "path": "input/point_prediction_support.csv.gz",
+      "sha256": "b9f9339c8ff3ff768f796398d9f2f91bfdbeca5e9064dce65548ffd27fe3576f"
+    },
+    {
+      "bytes": 38110671,
+      "path": "input/grid_prediction_support.nc",
+      "sha256": "4b1b2f2dc691a86ffb4dc96fcfc86be57905d75cf8d6b4596c768bab82d4634a"
+    },
+    {
+      "bytes": 2878,
+      "path": "input/xco2_monthly_1972_2023.csv.gz",
+      "sha256": "a75b846f372a46b96cab403767c040e742165a1808ae48ab74fc04af40fa86e3"
+    },
+    {
+      "bytes": 966,
+      "path": "input/README.md",
+      "sha256": "2a825f5a0c175971a477dfc4eeaf8e808cfccde568aa92f66715aee5ae655ae8"
+    }
+  ],
+  "reconstructed_choices": [
+    "paper Table 1 additional adjustments without unavailable 2023 row-wise micro-adjustment",
+    "public predictor-intersection Atlantic grid mask",
+    "unweighted 1972-2013 monthly xCO2 mean for the timeless grid"
+  ],
+  "schema_version": "1.0",
+  "support": {
+    "grid_valid_cells": 289219,
+    "point_rows": 152127,
+    "qc_rows": 96079
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "case_id": "cryosphere/tp_glacier_sat_station_correction_v13",
+  "schema_version": "1.0",
+  "exact_output_files": [
+    "sat_201901.tif",
+    "sat_201907.tif",
+    "representative_sat.png",
+    "method_report.md"
+  ],
+  "raster": {
+    "width": 80,
+    "height": 70,
+    "crs": "EPSG:4326",
+    "transform": [
+      0.01,
+      0.0,
+      96.5,
+      0.0,
+      -0.01,
+      29.7
+    ],
+    "dtype": "float32",
+    "units": "degree_Celsius",
+    "range": [
+      -80.0,
+      50.0
+    ]
+  },
+  "report_minimum_bytes": 800,
+  "report_required_tokens": [
+    "RMSE",
+    "MBE",
+    "R2",
+    "MOD11A1",
+    "MYD11A1",
+    "MOD13A3",
+    "MCD43A3",
+    "SRTM",
+    "ERA5",
+    "CMA",
+    "NCEI",
+    "TPDC",
+    "self-check",
+    "spatiotemporal"
+  ]
+}

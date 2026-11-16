@@ -1,0 +1,35 @@
+{
+  "0.6": "C similarity >=0.92 AND B fidelity >=0.95 (both required; expert-level quality)",
+  "0.8": "all 0.6 gates AND combined independent-B circular-month error improves over expert by >=0.25 month; no additional C threshold",
+  "1.0": "all 0.8 gates AND both disjoint B partitions improve by >=0.25 month; no additional C threshold",
+  "B_fidelity_tiers": {
+    "0.2": "otherwise",
+    "0.4": ">=0.75",
+    "0.6": ">=0.95"
+  },
+  "C_similarity_tiers": {
+    "0.2": "otherwise",
+    "0.4": ">=0.72",
+    "0.6": ">=0.92"
+  },
+  "author_replay": 0.6,
+  "boundary_rule": "If B improvement >=0.25 month but any 0.6 gate fails (e.g. C similarity <0.92), the candidate keeps its low-branch score and detail is tagged BOUNDARY_B_IMPROVED_BUT_EXPERT_LEVEL_GATES_FAILED for separate analysis; no prerequisite gate is bypassed.",
+  "case_id": "ecology/sierra_nevada_eft_v09",
+  "decision_order": [
+    "formal output gate",
+    "cumulative S1-S3: min(C similarity tier, B fidelity tier)",
+    "S4 requires S3 gates AND combined B improvement >=0.25 month",
+    "S5 requires S4 gates AND both disjoint B partitions improvement >=0.25 month"
+  ],
+  "fixed_report_wording_required": false,
+  "levels": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "ordinary_agent_high_tiers_allowed": true,
+  "schema_version": "1.0"
+}

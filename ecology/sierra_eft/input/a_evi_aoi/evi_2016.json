@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "year": 2016,
+  "shape": [
+    23,
+    164,
+    410
+  ],
+  "aoi": {
+    "south": 36.91,
+    "west": -3.64,
+    "north": 37.25,
+    "east": -2.59
+  },
+  "source_grid": {
+    "projection": "GCTP_SNSOID",
+    "sphere_radius_m": 6371007.181,
+    "pixel_size_m": 231.656358263889,
+    "tile": "h17v07"
+  },
+  "records": [
+    {
+      "native_id": "MOD13Q1.A2016001.h17v07.061.2021343002959",
+      "concept_id": "G2194331117-LPCLOUD",
+      "beginning_datetime": "2016-01-01T00:00:00.000Z",
+      "raw_hdf_bytes": 160206287,
+      "raw_hdf_sha256": "b0d673d5d69b616311116983ac6e33db0ef3585e302db668e9db4f57e988f8c1",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016017.h17v07.061.2021343115404",
+      "concept_id": "G2194334863-LPCLOUD",
+      "beginning_datetime": "2016-01-17T00:00:00.000Z",
+      "raw_hdf_bytes": 160272593,
+      "raw_hdf_sha256": "634ec0ce61a5fad8ce02e984e9a2d6e164ae58c217bec53f1907edac013e1333",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016033.h17v07.061.2021346031725",
+      "concept_id": "G2194340023-LPCLOUD",
+      "beginning_datetime": "2016-02-02T00:00:00.000Z",
+      "raw_hdf_bytes": 159034824,
+      "raw_hdf_sha256": "2621ba08112cc62333973bd00b4fb62a51790c01d68b3c674fc3c6528f568bdf",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 4,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016049.h17v07.061.2021346085722",
+      "concept_id": "G2194343341-LPCLOUD",
+      "beginning_datetime": "2016-02-18T00:00:00.000Z",
+      "raw_hdf_bytes": 144777167,
+      "raw_hdf_sha256": "5a18cfbabaa0305270bcbdec9f206a8de10809c724d3d26a7767a7597e40a5d8",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 1,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016065.h17v07.061.2021346125755",
+      "concept_id": "G2194344398-LPCLOUD",
+      "beginning_datetime": "2016-03-05T00:00:00.000Z",
+      "raw_hdf_bytes": 166748986,
+      "raw_hdf_sha256": "63c505119194568c8b3efe452416ee9457a9af43f5d688a83287ad4122f7ad85",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 27,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016081.h17v07.061.2021347013848",
+      "concept_id": "G2194346328-LPCLOUD",
+      "beginning_datetime": "2016-03-21T00:00:00.000Z",
+      "raw_hdf_bytes": 163480929,
+      "raw_hdf_sha256": "d18d76de7bf90e0e027eb096e4a6d4b3b73efd8fdc1e5350d7c58e718e5e0d6b",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016097.h17v07.061.2021348041529",
+      "concept_id": "G2194351913-LPCLOUD",
+      "beginning_datetime": "2016-04-06T00:00:00.000Z",
+      "raw_hdf_bytes": 160390544,
+      "raw_hdf_sha256": "6922bdfef093e6794b6e3d5c93e8348c61b6cc127bf464c136769906231f15e7",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016113.h17v07.061.2021349015259",
+      "concept_id": "G2194351726-LPCLOUD",
+      "beginning_datetime": "2016-04-22T00:00:00.000Z",
+      "raw_hdf_bytes": 166713143,
+      "raw_hdf_sha256": "e31786b31aebb51d51cbb6f9fcd88318bf38e65bd42d9b990613fd2877481852",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016129.h17v07.061.2021350045412",
+      "concept_id": "G2194356430-LPCLOUD",
+      "beginning_datetime": "2016-05-08T00:00:00.000Z",
+      "raw_hdf_bytes": 160161441,
+      "raw_hdf_sha256": "2c08a3a3a1435095d2069d23c06e49beab030154e8ecbc1251bd7071565fa1ae",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016145.h17v07.061.2021351090248",
+      "concept_id": "G2194358069-LPCLOUD",
+      "beginning_datetime": "2016-05-24T00:00:00.000Z",
+      "raw_hdf_bytes": 162544279,
+      "raw_hdf_sha256": "97c30570c8aed2a3ac80821bcb9f74d18b21806ea837fac4b2ad0a1212eedc64",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016161.h17v07.061.2021353015538",
+      "concept_id": "G2194361589-LPCLOUD",
+      "beginning_datetime": "2016-06-09T00:00:00.000Z",
+      "raw_hdf_bytes": 165388954,
+      "raw_hdf_sha256": "4e6d7ad43999ce0d6f43709163b6878d86d71a45bba7691d713f3899c3318805",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016177.h17v07.061.2021353095603",
+      "concept_id": "G2194360377-LPCLOUD",
+      "beginning_datetime": "2016-06-25T00:00:00.000Z",
+      "raw_hdf_bytes": 165224153,
+      "raw_hdf_sha256": "5dfb8d80e2324577b8fcfe3cd98d80b17cee4a99352e62f73b2efb7a5b75da6c",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016193.h17v07.061.2021354120843",
+      "concept_id": "G2194362882-LPCLOUD",
+      "beginning_datetime": "2016-07-11T00:00:00.000Z",
+      "raw_hdf_bytes": 169361354,
+      "raw_hdf_sha256": "3664dbcae761a9ae7fa3dc56f095b10073b8f6e6d605401c1c4e80b9b3332b3a",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016209.h17v07.061.2021356182534",
+      "concept_id": "G2194366119-LPCLOUD",
+      "beginning_datetime": "2016-07-27T00:00:00.000Z",
+      "raw_hdf_bytes": 171935894,
+      "raw_hdf_sha256": "455fc0d434a4a00d358a8a6323691bb99f6bab56b41bc07307df20eabb661c8c",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016225.h17v07.061.2021357013643",
+      "concept_id": "G2194366705-LPCLOUD",
+      "beginning_datetime": "2016-08-12T00:00:00.000Z",
+      "raw_hdf_bytes": 167073471,
+      "raw_hdf_sha256": "ebb26a0de4f07b483eee92c1031a5935759704a70938911ef6e9ec15e3fce976",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016241.h17v07.061.2021357061356",
+      "concept_id": "G2194369332-LPCLOUD",
+      "beginning_datetime": "2016-08-28T00:00:00.000Z",
+      "raw_hdf_bytes": 170381045,
+      "raw_hdf_sha256": "cfa7450491b684947a89217938a58e81f223bf08d24c728a5e486cede50924df",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016257.h17v07.061.2021358015716",
+      "concept_id": "G2194369958-LPCLOUD",
+      "beginning_datetime": "2016-09-13T00:00:00.000Z",
+      "raw_hdf_bytes": 165602132,
+      "raw_hdf_sha256": "2a98c820d5afc806c3f0b8fe437df502dd8df51f5b6078aa3dea7306d23d188f",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016273.h17v07.061.2021358104551",
+      "concept_id": "G2194372890-LPCLOUD",
+      "beginning_datetime": "2016-09-29T00:00:00.000Z",
+      "raw_hdf_bytes": 166305559,
+      "raw_hdf_sha256": "326945297b6726b1191ca007aef1385a59064624a68695ac34dc993b86f66b91",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016289.h17v07.061.2021360015828",
+      "concept_id": "G2194374275-LPCLOUD",
+      "beginning_datetime": "2016-10-15T00:00:00.000Z",
+      "raw_hdf_bytes": 158516888,
+      "raw_hdf_sha256": "35d4b9b6bfeb4695daf1924833c42f0b9f5aceb53f0bc2952cd5a700797d2095",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016305.h17v07.061.2021360030935",
+      "concept_id": "G2194375110-LPCLOUD",
+      "beginning_datetime": "2016-10-31T00:00:00.000Z",
+      "raw_hdf_bytes": 157778494,
+      "raw_hdf_sha256": "1859d40a668b31fa2fb611ec5bd375a4500ec9734eee1bd0711473d1acd646c2",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 0,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016321.h17v07.061.2021361163830",
+      "concept_id": "G2194377546-LPCLOUD",
+      "beginning_datetime": "2016-11-16T00:00:00.000Z",
+      "raw_hdf_bytes": 156108606,
+      "raw_hdf_sha256": "a4b802c2e27f61c84b8a838277f4eb73b13949f1c897ab0d16285ff14569a56b",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 1,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016337.h17v07.061.2021363021503",
+      "concept_id": "G2194378391-LPCLOUD",
+      "beginning_datetime": "2016-12-02T00:00:00.000Z",
+      "raw_hdf_bytes": 159475006,
+      "raw_hdf_sha256": "ee877456c6b91cc843207659f6f478de7c2a92d3e4f0310ca072160f6bf48256",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 409,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    },
+    {
+      "native_id": "MOD13Q1.A2016353.h17v07.061.2021363152754",
+      "concept_id": "G2194379936-LPCLOUD",
+      "beginning_datetime": "2016-12-18T00:00:00.000Z",
+      "raw_hdf_bytes": 167034896,
+      "raw_hdf_sha256": "7cce9aa8cb725d897c5ea1f31e167c4dc40ba5399666bfd18f2c4536174739b1",
+      "source_sds": "250m 16 days EVI",
+      "source_scale_factor": 10000.0,
+      "negative_to_zero": true,
+      "raw_fill_value": -3000,
+      "raw_fill_count": 1005,
+      "window": {
+        "row_start": 1320,
+        "row_stop": 1484,
+        "col_start": 3402,
+        "col_stop": 3812
+      }
+    }
+  ]
+}

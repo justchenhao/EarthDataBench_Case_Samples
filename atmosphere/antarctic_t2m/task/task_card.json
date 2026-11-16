@@ -1,0 +1,29 @@
+{
+  "taskId": "atmosphere/antarctic_monthly_t2m_reconstruction",
+  "title": "Antarctic Monthly Near-Surface Air Temperature Anomaly Reconstruction",
+  "summary": "Use raw monthly anchor-station temperature releases and ERA5 spatial relationships to reconstruct 1958-2022 monthly Antarctic 2 m air-temperature anomalies on a 114 x 114 grid.",
+  "variants": {
+    "base": "task/task_prompt_base.md",
+    "open": "task/task_prompt_open.md"
+  },
+  "inputFiles": [
+    "input/era5/",
+    "input/stations/reader/",
+    "input/stations/ghcnm/",
+    "input/stations/byrd/",
+    "input/stations/south_pole/",
+    "input/grid/grid_template.nc"
+  ],
+  "outputContract": "task/output_contract.json",
+  "evaluation": "Evaluation checks deliverable completeness, schema and coverage, physical and reference-period consistency, agreement of the submitted target with a private expert field and held-out station observations, reproducibility, and compliance of the representative figure with its deterministic plot contract.",
+  "max_score": 1.0,
+  "validation_fidelity": "approximate",
+  "referenceProvenance": "published_product",
+  "scoreSemantics": {
+    "0.2": "Minimum usability",
+    "0.4": "Scientific consistency",
+    "0.6": "Expert-level quality (C tolerance AND B non-inferiority)",
+    "0.8": "Beyond-expert (0.6 gates AND prespecified B improvement)",
+    "1.0": "Stronger improvement (0.8 gates AND second independent axis or stronger frozen B evidence)"
+  }
+}

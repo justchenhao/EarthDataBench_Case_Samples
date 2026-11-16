@@ -1,0 +1,104 @@
+{
+  "schema_version": "earthdatabench-reviewer-seven-cases.v1",
+  "created_date": "2026-11-16",
+  "audience": "reviewer-only",
+  "case_count": 7,
+  "source_root": "data/geodatabench/2-final-40case",
+  "cases": [
+    {
+      "case_id": "atmosphere/antarctic_monthly_t2m_reconstruction",
+      "file_count": 74,
+      "bytes": 1477555843,
+      "task_card_sha256": "d3105cece228018ac8dddf18a9ead012f89a678a2b8e0669a7748b47978a9fbc",
+      "package_manifest_sha256": "a60cfd34642e7731bcacff40dc5430bdf5a1e9484036d7e2b37b740ab11927e6",
+      "archive_path": "atmosphere/antarctic_t2m/",
+      "source_file_count_before_prompt_update": 75,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    },
+    {
+      "case_id": "cryosphere/tp_glacier_sat_station_correction_v13",
+      "file_count": 23,
+      "bytes": 305063,
+      "task_card_sha256": "fb271ed534ab71f7879c756326a767529a69f90c4b1b72a115e55b0bccb013a3",
+      "package_manifest_sha256": "0d4aad5d31b0823aee23a8f9e5c3c8c58fcdfa44c06608d77c4ba9d619ece445",
+      "archive_path": "cryosphere/tp_glacier_sat/",
+      "source_file_count_before_prompt_update": 24,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    },
+    {
+      "case_id": "ecology/sierra_nevada_eft_v09",
+      "file_count": 57,
+      "bytes": 60334333,
+      "task_card_sha256": "1ed1da4c170356e9c99981352f9d7206edf95db577e48234a9fd1776d61b9218",
+      "package_manifest_sha256": "dbe9102f78b8e9996fbb71afa91ccb6e9454c9e82c880dd98e8acd1892715a77",
+      "archive_path": "ecology/sierra_eft/",
+      "source_file_count_before_prompt_update": 58,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    },
+    {
+      "case_id": "hydrology/fluxnet2015_et_benchmark_v05",
+      "file_count": 23,
+      "bytes": 2434616,
+      "task_card_sha256": "3848af3b7c97706d9c81508308b34faef1100bb768f7024e357ef31265acb75e",
+      "package_manifest_sha256": "c09792af84bec32c07d575380a36cd7091fd3a514edf0b582efb8532465b0a80",
+      "archive_path": "hydrology/fluxnet_et/",
+      "source_file_count_before_prompt_update": 24,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    },
+    {
+      "case_id": "land/crop_sequence_eu_lucas_2012_2018",
+      "file_count": 18,
+      "bytes": 142614706,
+      "task_card_sha256": "636841c1473fbd96168d72b307a5492df2bd5581becb3292ce19f234c2dbc51d",
+      "package_manifest_sha256": "82b3fbb22b440f4b5853eb96894df1d66215170fc6f47a80dec1b22fe9248a3e",
+      "archive_path": "land/lucas_crop/",
+      "source_file_count_before_prompt_update": 19,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    },
+    {
+      "case_id": "ocean/atlantic_d13c_dic_gpr_v03",
+      "file_count": 36,
+      "bytes": 82370961,
+      "task_card_sha256": "4f0f6355123cd9d9adbe200460074b5feb40c152d3fe14afbd1c79d2f2064b81",
+      "package_manifest_sha256": "908611d54ecaa8a59c00e20a92578ccbb4c60386e9173e2022e41db3a543a13d",
+      "archive_path": "ocean/atlantic_d13c/",
+      "source_file_count_before_prompt_update": 37,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    },
+    {
+      "case_id": "solid_earth/hust_grace2024_paper_evaluation_v24",
+      "file_count": 21,
+      "bytes": 15429057,
+      "task_card_sha256": "4511c7a6aef71acbdb62f0744c809964c1cf6f8b0426dba2429e51ee541d186c",
+      "package_manifest_sha256": "0eb11e0ece07fb3724c263d86423ebdaafbdb3cd9419a66279469087e17a4c04",
+      "archive_path": "solid_earth/hust_grace/",
+      "source_file_count_before_prompt_update": 22,
+      "prompt_variants": {
+        "base": "task/task_prompt_base.md",
+        "open": "task/task_prompt_open.md (former Hard prompt content)"
+      }
+    }
+  ],
+  "total_files": 252,
+  "total_bytes": 1781044579,
+  "archive_naming": "Short review labels without version suffixes; canonical case_id and internal taskId remain unchanged.",
+  "prompt_update": "Two variants only: Base and Open. Open is the former Hard prompt verbatim; Hard files are absent. Task cards, run_config files, task README files, and manifests are synchronized."
+}

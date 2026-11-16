@@ -1,0 +1,48 @@
+{
+  "taskId": "cryosphere/tp_glacier_sat_station_correction_v13",
+  "title": "Tibetan glacier monthly SAT reconstruction with source-complete bounded inputs",
+  "summary": "Produce two bounded Parlung monthly glacier SAT rasters from MODIS, terrain, reanalysis and station-source projection.",
+  "variants": {
+    "base": "task/task_prompt_base.md",
+    "open": "task/task_prompt_open.md"
+  },
+  "inputFiles": [
+    "input/public_a.tar.gz"
+  ],
+  "outputContract": "task/output_contract.json",
+  "evaluation": "Output-first raster delivery checks, then concealed C raster comparison and station-disjoint independent validation; references, support, thresholds and scoring logic are private.",
+  "max_score": 1.0,
+  "validation_fidelity": "unavailable",
+  "referenceProvenance": "published_product",
+  "referenceNotes": "C comprises the author-published January and July 2019 SAT grids. Independent B contains observed station truth, not reconstructed truth. The separate author-method stacking reconstruction is only the B comparator, not C or B.",
+  "scoreSemantics": {
+    "0.2": "Minimum usability",
+    "0.4": "Scientific consistency",
+    "0.6": "Expert-level quality (C tolerance AND B non-inferiority)",
+    "0.8": "Beyond-expert (0.6 gates AND prespecified B improvement)",
+    "1.0": "Stronger improvement (0.8 gates AND second independent axis or stronger frozen B evidence)"
+  },
+  "baseline_reconstruction": {
+    "path": "reference/author_method_reconstruction.csv.gz",
+    "role": "bounded author-method stacking baseline",
+    "original_author_model": false,
+    "model_sha256": "13d3ab9a58f6f9379146937f0edb8548f7dc002513291ac6449f2ab6958223d5",
+    "public_loso": {
+      "n": 10,
+      "rmse": 0.6619196736644696,
+      "mae": 0.49952101993217723,
+      "mbe": -0.2913451287083164,
+      "abs_mbe": 0.2913451287083164,
+      "r2": 0.994484493677931
+    },
+    "testing_overall": {
+      "n": 16,
+      "rmse": 1.622887204310938,
+      "mae": 1.2540111417809103,
+      "mbe": -0.9403720112111565,
+      "abs_mbe": 0.9403720112111565,
+      "r2": 0.9671950663873006
+    },
+    "published_grid_component": "reference/author_grid_201901.tif and author_grid_201907.tif remain published-product C checks"
+  }
+}
